@@ -46,7 +46,7 @@ nav a {
     color: var(--header-fg);
 }
 
-#searchInput input[type=text] {
+#searchInput {
     background-color: #3CBC8D;
     color: white;
     border: none;
@@ -56,6 +56,6 @@ nav a {
     transition: background-color 0.3s ease;
 }
 
-#searchInput input[type=text]:focus {
+#searchInput:focus {
     background-color: #28a745;
 }

@@ -46,9 +46,16 @@ nav a {
     color: var(--header-fg);
 }
 
-input[type=text] {
+#searchInput input[type=text] {
     background-color: #3CBC8D;
     color: white;
-  }
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
 
-    
+#searchInput input[type=text]:focus {
+    background-color: #28a745;
+}

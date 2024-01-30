@@ -1,0 +1,54 @@
+[data-theme="light"] {
+    --color-bg: #fff;
+    --color-fg: #222;
+
+}
+
+[data-theme="dark"] {
+    --color-bg: #333;
+    --color-fg: #ffffff;
+
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+}
+
+header {
+    background-color: #666;
+    padding: 1rem;
+    text-align: right;
+}
+
+.theme {
+    background-color: var(--color-fg);
+    color: var(--color-bg);
+    border: none;
+    padding: 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    border-radius: 4px;
+}
+
+nav {
+    text-align: cen;
+    padding: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 6px;
+    color: var(--header-fg);
+}
+
+.search input[type=text] {
+    background-color: #3CBC8D;
+    color: white;
+  }
+
+    

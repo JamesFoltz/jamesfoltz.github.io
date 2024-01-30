@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html data-theme="light">
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <button type="button" class="theme" data-theme-toggle>Theme</button>
+      </nav>
+    </header>
+    <input type="text" id="searchInput" placeholder="Search...">
+    <ul id="dynamicList"></ul>
+    
+    <script>
+        // Sample data with HTML content
+        const dataList = [
+            '<strong>Item 1</strong>',
+            '<em>Item 2</em>',
+            '<a href="#">Item 3</a>',
+            '<div style="color: blue;">Another Item</div>',
+            'Yet Another Item',
+            'More Items'
+        ];
+    
+        // Function to display the list based on the search query
+        function displayList(query) {
+            const dynamicList = document.getElementById('dynamicList');
+            dynamicList.innerHTML = '';
+    
+            // Filter the array based on the search query
+            const filteredList = dataList.filter(item => item.toLowerCase().includes(query.toLowerCase()));
+    
+            // Display the filtered list with HTML content
+            filteredList.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = item;
+                dynamicList.appendChild(li);
+            });
+        }
+    
+        // Function to handle the input event and trigger list display
+        function handleInput() {
+            const searchInput = document.getElementById('searchInput');
+            const query = searchInput.value;
+            displayList(query);
+        }
+    
+        // Add event listener to the input field
+        document.getElementById('searchInput').addEventListener('input', handleInput);
+    
+        // Initial display of the entire list
+        displayList('');
+
+    function getTheme({ storedTheme, systemDarkSetting }) {
+    if (storedTheme !== null) return storedTheme;
+    return systemDarkSetting.matches ? "dark" : "light";
+  }
+
+  function updateHtmlTheme({ theme }) {
+    document.querySelector("html").setAttribute("data-theme", theme);
+  }
+
+  const btn = document.querySelector("[data-theme-toggle]");
+  const storedTheme = localStorage.getItem("theme");
+  const systemDarkSetting = window.matchMedia("(prefers-color-scheme: dark)");
+
+  let currentTheme = getTheme({ storedTheme, systemDarkSetting });
+
+  updateHtmlTheme({ theme: currentTheme });
+
+  btn.addEventListener("click", () => {
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+    localStorage.setItem("theme", newTheme);
+    updateHtmlTheme({ theme: newTheme });
+
+    currentTheme = newTheme;
+  });
+</script>
+
+  </body>
+</html>

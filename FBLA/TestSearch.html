@@ -2,6 +2,7 @@
 <html data-theme="light">
   <head>
     <link rel="stylesheet" href="style.css" />
+    <title>v.1.0</title>
   </head>
 
   <body>
@@ -33,7 +34,7 @@
               required
               placeholder="Description"
             ></textarea><br />
-            <input type="file" name="filename" accept="image/jpeg, image/png, image/webp"><br />
+            <input type="file" name="filename" accept="image/jpeg, image/png, image/webp" id="imageUpload"><br />
 
             <button type="submit" onclick="if(validateForm()) generateHTML()">Add Company</button>
           </form>
@@ -42,7 +43,6 @@
     </header>
     <input type="text" id="searchInput" placeholder="Search..." />
     <ul id="dynamicList" style="list-style: none;"></ul>
-
 
     <script src="script.js"></script>
   </body>

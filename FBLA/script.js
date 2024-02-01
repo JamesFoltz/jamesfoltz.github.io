@@ -137,14 +137,14 @@ themeToggleBtn.addEventListener("click", () => {
 });
 
 function generateHTML() {
-  var companyName = document.getElementById("companyName").value;
-  var owner = document.getElementById("owner").value;
+  var companyName = document.getElementById("companyName");
+  var owner = document.getElementById("owner");
   var urlInput = document.getElementById("url");
-  var description = document.getElementById("description").value;
+  var description = document.getElementById("description");
 
   // Validate URL and update value
   checkURL(urlInput);
-  var url = urlInput.value;
+  var url = urlInput;
 
   // Get the selected file from the input element
   var logoInput = document.getElementById("logo");

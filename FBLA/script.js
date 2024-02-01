@@ -53,12 +53,24 @@ function displayList(query) {
     const li = document.createElement("li");
     const h3 = document.createElement("h3");
     const p = document.createElement("p");
+    //const logo = document.createElement("img");
 
-    h3.textContent = item.companyName;
-    p.innerHTML = `${item.owner}<br>Find us at: <a href="${item.url}" style="color: var(--color-link);">${item.url}</a><br>${item.description}`;
-
-    li.appendChild(h3);
-    li.appendChild(p);
+    li.innerHTML = `
+<div style="display: flex; align-items: center">
+  <img
+    src="https://via.placeholder.com/128x128"
+    alt=""
+    width="128"
+    height="128"
+    style="margin-right: 10px"
+  />
+  <div>
+    <h3>${item.company}</h3>
+    <p>Find us at ${item.url}</p>
+    <p>${item.description}</p>
+  </div>
+</div>
+    `;
 
     dynamicList.appendChild(li);
   });
@@ -127,8 +139,8 @@ function generateHTML() {
   var companyName = document.getElementById("companyName").value;
   var owner = document.getElementById("owner").value;
   var urlInput = document.getElementById("url");
+  //var logo = document.getElementById("logoUpload");
 
-  // Use the checkURL function to ensure the URL is properly formatted
   checkURL(urlInput);
   var url = urlInput.value;
 

@@ -63,7 +63,7 @@ function displayList(query) {
     style="margin-right: 10px"
   />
   <div>
-    <h3>${item.company}</h3>
+    <h3>${item.companyName}</h3>
     <p>${item.owner}</p>
     <p>Find us at ${item.url}</p>
     <p>${item.description}</p>
@@ -138,24 +138,44 @@ function generateHTML() {
   var companyName = document.getElementById("companyName").value;
   var owner = document.getElementById("owner").value;
   var urlInput = document.getElementById("url");
-  //var logo = document.getElementById("logoUpload");
+  var description = document.getElementById("description").value;
 
+  // Validate URL and update value
   checkURL(urlInput);
   var url = urlInput.value;
 
-  var description = document.getElementById("description").value;
+  // Get the selected file from the input element
+  var logoInput = document.getElementById("logo");
+  var logoFile = logoInput.files[0];
 
-  description = description.replace(/\n/g, "<br/>");
+  // Check if required fields are filled out
+  if (!companyName || !url || !logoFile) {
+    alert("Please fill out all required fields.");
+    return; // Prevent further execution
+  }
 
-  var companyObject = {
-    companyName: companyName,
-    owner: owner,
-    url: url,
-    description: description,
+  // Read the selected image file
+  var reader = new FileReader();
+  reader.onload = function (e) {
+    // Create a new company object with image data
+    var companyObject = {
+      companyName: companyName,
+      owner: owner,
+      url: url,
+      description: description,
+      logoData: e.target.result, // Base64-encoded image data
+    };
+
+    // Push the new company object to the dataList
+    dataList.push(companyObject);
+
+    // Update the displayed list
+    displayList("");
+
+    // Save data to localStorage
+    saveToLocalStorage();
   };
 
-  dataList.push(companyObject);
-
-  displayList("");
-  saveToLocalStorage();
+  // Read the selected file as Data URL
+  reader.readAsDataURL(logoFile);
 }

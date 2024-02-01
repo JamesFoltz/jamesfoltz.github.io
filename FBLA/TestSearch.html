@@ -24,7 +24,7 @@
               required
             /><br />
             <input type="text" id="owner" name="owner" placeholder="Industry" /><br />
-            <input type="url" id="url" name="url" placeholder="Website" equired/><br />
+            <input type="url" id="url" name="url" placeholder="Website" required/><br />
             <textarea
               id="description"
               name="description"
@@ -33,10 +33,8 @@
               required
               placeholder="Description"
             ></textarea><br />
-            <input type="file" id="logo" name="Logo">
-            <input type="submit"><br />
+            <input type="file" name="filename" accept="image/jpeg, image/png, image/webp"><br />
 
-  
             <button type="submit" onclick="if(validateForm()) generateHTML()">Add Company</button>
           </form>
       </nav>

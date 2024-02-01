@@ -51,8 +51,6 @@ function displayList(query) {
 
   filteredList.forEach((item) => {
     const li = document.createElement("li");
-    const h3 = document.createElement("h3");
-    const p = document.createElement("p");
     //const logo = document.createElement("img");
 
     li.innerHTML = `
@@ -66,11 +64,12 @@ function displayList(query) {
   />
   <div>
     <h3>${item.company}</h3>
+    <p>${item.owner}</p>
     <p>Find us at ${item.url}</p>
     <p>${item.description}</p>
   </div>
 </div>
-    `;
+`;
 
     dynamicList.appendChild(li);
   });

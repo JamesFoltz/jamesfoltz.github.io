@@ -51,7 +51,7 @@ function displayList(query) {
 
   filteredList.forEach((item) => {
     const li = document.createElement("li");
-    //const logo = document.createElement("img");
+
 
 li.innerHTML = `
 <div style="display: flex; align-items: center">
@@ -96,9 +96,10 @@ function loadFromLocalStorage() {
 
 function handleInput() {
   const searchInput = document.getElementById("searchInput");
-  const query = searchInput.value;
+  const query = searchInput.value.toString(); // Ensure query is a string
   displayList(query);
 }
+
 
 document.getElementById("searchInput").addEventListener("input", handleInput);
 

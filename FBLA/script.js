@@ -53,10 +53,10 @@ function displayList(query) {
     const li = document.createElement("li");
     //const logo = document.createElement("img");
 
-    li.innerHTML = `
+li.innerHTML = `
 <div style="display: flex; align-items: center">
   <img
-    src="https://via.placeholder.com/128x128"
+    src="${item.logoData || 'https://via.placeholder.com/128x128'}"
     alt=""
     width="128"
     height="128"
@@ -70,6 +70,7 @@ function displayList(query) {
   </div>
 </div>
 `;
+
 
     dynamicList.appendChild(li);
   });

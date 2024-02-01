@@ -39,7 +39,7 @@ function toggleForm() {
 
 function displayList(query) {
   const dynamicList = document.getElementById("dynamicList");
-  //dynamicList.innerHTML = "";
+  dynamicList.innerHTML = "";
 
   const filteredList = dataList.filter(
     (item) =>
@@ -137,14 +137,14 @@ themeToggleBtn.addEventListener("click", () => {
 });
 
 function generateHTML() {
-  var companyName = document.getElementById("companyName");
-  var owner = document.getElementById("owner");
+  var companyName = document.getElementById("companyName").value;
+  var owner = document.getElementById("owner").value;
   var urlInput = document.getElementById("url");
-  var description = document.getElementById("description");
+  var description = document.getElementById("description").value;
 
   // Validate URL and update value
   checkURL(urlInput);
-  var url = urlInput;
+  var url = urlInput.value;
 
   // Get the selected file from the input element
   var logoInput = document.getElementById("logo");

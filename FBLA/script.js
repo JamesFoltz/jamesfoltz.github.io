@@ -39,7 +39,7 @@ function toggleForm() {
 
 function displayList(query) {
   const dynamicList = document.getElementById("dynamicList");
-  dynamicList.innerHTML = "";
+  //dynamicList.innerHTML = "";
 
   const filteredList = dataList.filter(
     (item) =>
@@ -56,7 +56,7 @@ function displayList(query) {
 li.innerHTML = `
 <div style="display: flex; align-items: center">
   <img
-    src="${item.logoData || 'https://via.placeholder.com/128x128'}"
+    src="${'https://via.placeholder.com/128x128'}"
     alt=""
     width="128"
     height="128"

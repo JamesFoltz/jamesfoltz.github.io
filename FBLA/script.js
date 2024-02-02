@@ -1,79 +1,102 @@
-const partners = [
-  `<div style="display: flex; align-items: center">
-  <img
-    src="{img}"
-    alt=""
-    width="128"
-    height="128"
-    style="margin-right: 10px"
-  />
-  <div>
-    <h3>{item.companyName}</h3>Appreciate
-    <p>{item.owner}</p>
-    <p>Find us at {item.url}</p>
-    <p>{item.description}</p>
-  </div>
-</div>`,
-  `Item 2`,
-  `Item 3`,
-  `Item 4`,
-  `Item 5`
-];
+// Initialize theme toggle
+const themeToggleBtn = document.querySelector('[data-theme-toggle]');
+themeToggleBtn.addEventListener('click', toggleTheme);
 
-function addItemsToDynamicList() {
-  const dynamicList = document.getElementById('dynamicList');
+// Initialize form toggle
+const formContainer = document.getElementById('formContainer');
+const openFormBtn = document.querySelector('.open-form-btn');
+openFormBtn.addEventListener('click', toggleForm);
 
-  partners.forEach(item => {
-      const li = document.createElement('li');
-      li.innerHTML = item;
-      dynamicList.appendChild(li);
-  });
+// Initialize form submission
+const htmlForm = document.getElementById('htmlForm');
+htmlForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+  generateHTML();
+});
+
+// Initialize search functionality
+const searchInput = document.getElementById('searchInput');
+searchInput.addEventListener('input', filterList);
+
+// Array to store items
+const itemsArray = [];
+
+// Function to toggle theme
+function toggleTheme() {
+  const htmlElement = document.documentElement;
+  const currentTheme = htmlElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  htmlElement.setAttribute('data-theme', newTheme);
 }
 
-// Invoke the function when the page is loaded
-document.addEventListener('DOMContentLoaded', addItemsToDynamicList);
-
-function validateForm() {
-  // Add your validation logic here if needed
-  return true;
+// Function to toggle form
+function toggleForm() {
+  formContainer.classList.toggle('hidden');
 }
 
+// Function to generate HTML and add items to the array and ul
 function generateHTML() {
-  // Get form values
-  var companyName = document.getElementById("companyName").value;
-  var owner = document.getElementById("owner").value;
-  var url = document.getElementById("url").value;
-  var description = document.getElementById("description").value;
-  var img = document.getElementById("imageUpload").value; // Assuming you want to use the image path
+  const companyName = document.getElementById('companyName').value;
+  const owner = document.getElementById('owner').value;
+  const url = document.getElementById('url').value;
+  const description = document.getElementById('description').value;
+  const img = document.getElementById('imageUpload').value; // Add logic to get the image source
 
-  // Validate form data
-  if (!validateForm()) {
-    return;
-  }
+  const item = {
+    companyName,
+    owner,
+    url,
+    description,
+    img,
+  };
 
-  // Create HTML content
-  var htmlContent = `
+  itemsArray.push(item);
+
+  const dynamicList = document.getElementById('dynamicList');
+  const listItem = document.createElement('li');
+  listItem.innerHTML = `
     <div style="display: flex; align-items: center">
-      <img
-        src="${img}"
-        alt=""
-        width="128"
-        height="128"
-        style="margin-right: 10px"
-      />
+      <img src=${img} alt="" width="128" height="128" style="margin-right: 10px" />
       <div>
         <h3>${companyName}</h3>
         <p>${owner}</p>
         <p>Find us at ${url}</p>
         <p>${description}</p>
       </div>
-    </div>`;
+    </div>
+  `;
+  dynamicList.appendChild(listItem);
 
-  // Append generated HTML to a target div (replace "targetDivId" with your actual target div ID)
-  var targetDiv = document.getElementById("targetDivId");
-  targetDiv.innerHTML += htmlContent;
+  // Clear form fields after submission
+  htmlForm.reset();
+}
 
-  // Optionally, you can reset the form after adding the company
-  document.getElementById("htmlForm").reset();
-  addItemsToDynamicList();
+// Function to filter the list based on search input
+function filterList() {
+  const searchTerm = searchInput.value.toLowerCase();
+  const filteredItems = itemsArray.filter(item =>
+    item.companyName.toLowerCase().includes(searchTerm) ||
+    item.owner.toLowerCase().includes(searchTerm) ||
+    item.url.toLowerCase().includes(searchTerm) ||
+    item.description.toLowerCase().includes(searchTerm)
+  );
+
+  // Update the displayed list
+  const dynamicList = document.getElementById('dynamicList');
+  dynamicList.innerHTML = '';
+  filteredItems.forEach(item => {
+    const listItem = document.createElement('li');
+    listItem.innerHTML = `
+      <div style="display: flex; align-items: center">
+        <img src=${item.img} alt="" width="128" height="128" style="margin-right: 10px" />
+        <div>
+          <h3>${item.companyName}</h3>
+          <p>${item.owner}</p>
+          <p>Find us at ${item.url}</p>
+          <p>${item.description}</p>
+        </div>
+      </div>
+    `;
+    dynamicList.appendChild(listItem);
+  });
 }

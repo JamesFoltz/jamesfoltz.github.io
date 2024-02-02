@@ -8,7 +8,7 @@ const partners = [
     style="margin-right: 10px"
   />
   <div>
-    <h3>{item.companyName}</h3>
+    <h3>{item.companyName}</h3>Appreciate
     <p>{item.owner}</p>
     <p>Find us at {item.url}</p>
     <p>{item.description}</p>

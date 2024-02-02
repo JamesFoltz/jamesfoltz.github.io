@@ -1,4 +1,4 @@
-const myList = [
+const partners = [
   `<div style="display: flex; align-items: center">
   <img
     src="{img}"
@@ -22,7 +22,7 @@ const myList = [
 
 const dynamicList = document.getElementById("dynamicList");
 
-myList.forEach(item => {
+partners.forEach(item => {
     const listItem = document.createElement("li");
 
     listItem.textContent = item;

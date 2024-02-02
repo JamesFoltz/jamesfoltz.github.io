@@ -41,7 +41,7 @@ function storeInput() {
   </div>
 </div>
 `);
-  list.appendChild(inputArray);
+  list.appendChild(inputArray[inputArray.length-1]);
   // Print the array to the console
   console.log(inputArray);
 }

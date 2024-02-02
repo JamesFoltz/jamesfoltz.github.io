@@ -2,7 +2,7 @@ textarea{
     resize: none;
 }
 .form-container {
-    display: none;
+    display: block;
     position: fixed;
     right: 20px;
     border-radius: 5px;

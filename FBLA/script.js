@@ -20,12 +20,15 @@ const partners = [
   `Item 5`
 ];
 
-const dynamicList = document.getElementById("dynamicList");
+function addItemsToDynamicList() {
+  const dynamicList = document.getElementById('dynamicList');
 
-partners.forEach(item => {
-    const listItem = document.createElement("li");
+  partners.forEach(item => {
+      const li = document.createElement('li');
+      li.innerHTML = item;
+      dynamicList.appendChild(li);
+  });
+}
 
-    listItem.textContent = item;
-
-    dynamicList.appendChild(listItem);
-});
+// Invoke the function when the page is loaded
+document.addEventListener('DOMContentLoaded', addItemsToDynamicList);

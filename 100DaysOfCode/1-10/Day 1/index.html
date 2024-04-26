@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./twConf.js"></script>
-    <title>Tips Calculator 2</title>
+<link rel="stylesheet" href="style.css">
+    <title>Tips Calculator</title>
 </head>
-<body class="flex flex-col justify-center items-center h-full" id="root">
-<div class="p-8 w-full max-w-md bg-white rounded-lg border border-gray-200 shadow-lg" id="calculator">
-<h1 class="text-3xl font-bold mb-4">Tip Calculator</h1>
-<input type="number" name="percent" id="tipPercent">
+<body id="root">
+<div id="calculator">
+<h1>Tip Calculator</h1>
+<label for="percent">Tip Percent: </label>
+<input type="number" name="percent" id="tipPercent" value="15">
+<label for="percent">%</label><br>
+<label for="percent">Price: $</label>
+<input type="number" name="price" id="price" value="50"><br>
+<div>
+    <h3>Total:</h3>
+    <p id="output"></p>
+</div>
+
+
 </div>
     <script src="./scripts.js"></script>
 </body>

@@ -3,10 +3,11 @@ const body = selectElem("#root");
 const calcBody = selectElem("#calculator");
 const output = selectElem("#output");
 const perPerson = selectElem("#perPerson");
-
+alert("checkpoint1");
 const priceElem = selectElem("#price");
 const people = selectElem("#numPeople");
 const tipPercentElem = selectElem("#tipPercent");
+alert("checkpoint2");
 
 resizeInput.call(tipPercentElem);
 resizeInput.call(people);
@@ -14,9 +15,17 @@ resizeInput.call(priceElem);
 
 function resizeInput() {
     let numPeople = people.value;
+    alert("checkpoint3"+ numPeople);
+
     let price = fixDecimalPlaces(priceElem.value * (tipPercentElem.value / 100 + 1),2);
+    alert("checkpoint4");
+
     this.style.width = `${this.value.length + 3}ch`;
+    alert("checkpoint5");
+
     output.innerHTML = `\$${price}`;
+    alert("checkpoint6");
+
     if (numPeople > 0) {
         perPerson.innerHTML = `\$${price/numPeople}`;        
     } else{

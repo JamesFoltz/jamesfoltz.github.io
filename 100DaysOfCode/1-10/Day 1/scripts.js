@@ -1,7 +1,8 @@
 const doc = document;
-const body = selectID("body");
+const body = selectID("root");
+const calcBody = selectID("calculator");
 const para = createElem("p", "para", "para", "This is a test");
-body.appendChild(para);
+calcBody.appendChild(para);
 
 
 function selectID(id) {

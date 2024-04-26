@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Tips Calculator</title>
 </head>
-<body id="root">
-<div id="calculator">
-<h1>Tip Calculator</h1>
-<label for="percent">Tip Percent: </label>
-<input type="number" name="percent" id="tipPercent" value="15">
-<label for="percent">%</label><br>
-<label for="percent">Price: $</label>
-<input type="number" name="price" id="price" value="50"><br>
-<div>
-    <h3>Total:</h3>
-    <p id="output"></p>
-</div>
-
-
-</div>
+<body class="bg-blue-50 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full">
+        <h1 class="text-xl font-bold text-center mb-4">Tip Calculator</h1>
+        <div>
+            <label for="tipPercent" class="block font-medium">Tip Percent:</label>
+            <div class="mt-1 flex rounded-md shadow-sm">
+                <input type="number" name="percent" id="tipPercent" value="15" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md">
+                <span class="inline-flex items-center px-3 rounded-r-md border border-l-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                    %
+                </span>
+            </div>
+        </div>
+        <div class="mt-4">
+            <label for="price" class="block font-medium">Price: $</label>
+            <input type="number" name="price" id="price" value="50" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md">
+        </div>
+        <div class="mt-4">
+            <h3 class="font-medium">Total:</h3>
+            <p id="output" class="text-lg font-semibold"></p>
+        </div>
+    </div>
     <script src="./scripts.js"></script>
 </body>
 </html>

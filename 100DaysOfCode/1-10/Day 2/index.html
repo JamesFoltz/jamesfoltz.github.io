@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gray-100">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Backgound Color Changer</title>
+    </head>
+    <body id="root">
+        <div id="calculator">
+            <h1>Tip Calculator with Backgound Color Changer</h1>
+            <label for="percent">Tip Percent: </label>
+            <input type="number" name="percent" id="tipPercent" value="15" />
+            
+            <label for="percent">%</label><br />
+            <label for="price">Price: $</label>
+            <input type="number" name="price" id="price" value="50" /><br />
+
+            <label for="people">People:</label>
+            <input type="number" name="people" id="people" value="1" />
+            <div>
+                <h3>Total:</h3>
+                <p id="output"></p>
+                <h3>Per Person:</h3>
+                <p id="perPerson"></p>
+            </div>
+        </div>
+        <script src="./scripts.js"></script>
+    </body>
+</html>

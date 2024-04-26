@@ -1,26 +1,37 @@
 const doc = document;
 const body = selectElem("#root");
 const calcBody = selectElem("#calculator");
-const output = selectElem("#output")
-var tipPercentElem = selectElem("#tipPercent"); // get the input element
-tipPercentElem.addEventListener("input", resizeInput); // bind the "resizeInput" callback on "input" event
-var priceElem = selectElem("#price"); // get the input element
-priceElem.addEventListener("input", resizeInput); // bind the "resizeInput" callback on "input" event
-resizeInput.call(tipPercentElem); // immediately call the function
+const output = selectElem("#output");
+const perPerson = selectElem("#perPerson");
+
+const priceElem = selectElem("#price");
+const people = selectElem("#numPeople");
+const tipPercentElem = selectElem("#tipPercent");
+
+resizeInput.call(tipPercentElem);
+resizeInput.call(people);
 resizeInput.call(priceElem);
 
 function resizeInput() {
-    var price = fixDecimalPlaces(priceElem.value*((tipPercentElem.value/100)+1), 2);
-    this.style.width = `${this.value.length + 2}ch`;
+    let numPeople = people.value;
+    let price = fixDecimalPlaces(priceElem.value * (tipPercentElem.value / 100 + 1),2);
+    this.style.width = `${this.value.length + 3}ch`;
     output.innerHTML = `\$${price}`;
+    if (numPeople > 0) {
+        perPerson.innerHTML = `\$${price/numPeople}`;        
+    } else{
+        perPerson.innerHTML = 'N/A';
+
+    }
 }
+
 function selectElem(query) {
     return doc.querySelector(query);
 }
 
 function fixDecimalPlaces(num, places) {
-    let placeMulti = 10**places;
-    return (Math.ceil(num*placeMulti)/placeMulti).toFixed(places);
+    let placeMulti = 10 ** places;
+    return (Math.ceil(num * placeMulti) / placeMulti).toFixed(places);
 }
 
 function createElem(tag, id, classAttribute, contents) {
@@ -36,3 +47,8 @@ function createElem(tag, id, classAttribute, contents) {
     }
     return newElem;
 }
+
+
+tipPercentElem.addEventListener("input", resizeInput);
+people.addEventListener("input", resizeInput);
+priceElem.addEventListener("input", resizeInput);

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrophysics Flashcards</title>
+    <!-- Include Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Enable dark mode support */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                color-scheme: dark;
+            }
+        }
+
+        /* Custom deep blue and purple color scheme */
+        .bg-deep-blue {
+            background-color: #1E3A8A; /* Deep blue */
+        }
+
+        .bg-deep-purple {
+            background-color: #6D28D9; /* Deep purple */
+        }
+
+        .hover-bg-deep-blue {
+            background-color: #1E40AF; /* Lighter deep blue for hover */
+        }
+
+        .hover-bg-deep-purple {
+            background-color: #7C3AED; /* Lighter deep purple for hover */
+        }
+    </style>
+</head>
+<body class="bg-deep-blue dark:bg-gray-900 text-gray-200 font-sans text-center">
+
+<div id="flashcard" class="max-w-lg mx-auto my-12 bg-white dark:bg-gray-800 shadow-lg p-6 rounded-lg">
+    <!-- Progress bar -->
+    <progress id="progress" class="w-full h-2 mb-4 bg-deep-purple rounded-lg" style="border-radius: 50%;" value="0" max="100"></progress>
+
+    <h2 id="section" class="text-xl font-semibold mb-4"></h2>
+    <p id="concept" class="text-lg mb-2"></p>
+    <div id="question" class="text-base mb-4"></div>
+    <div id="answer" class="text-base mb-4 hidden"></div>
+
+    <div class="space-x-4">
+        <button id="showAnswerBtn" onclick="showAnswer()" class="px-4 py-2 bg-deep-purple hover:bg-deep-blue text-white rounded-lg">Show Answer</button>
+        <button onclick="prevCard()" class="px-4 py-2 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 text-black dark:text-white rounded-lg">Previous</button>
+        <button onclick="nextCard()" class="px-4 py-2 bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500 text-black dark:text-white rounded-lg">Next</button>
+    </div>
+</div>
+
+<script src="flashcards.js"></script>
+<script>
+    var currentCard = 0;
+
+    // Function to render flashcard
+    function renderCard() {
+        var card = flashcards[currentCard];
+        document.getElementById("section").innerText = card.section;
+        document.getElementById("concept").innerText = "Concept: " + card.concept;
+        document.getElementById("question").innerText = "Question: " + card.question;
+        document.getElementById("answer").innerText = "Answer: " + card.answer;
+        document.getElementById("answer").style.display = "none";
+
+        // Reset the show answer button visibility
+        document.getElementById("showAnswerBtn").style.display = "inline-block";
+
+        // Update progress bar
+        updateProgressBar();
+    }
+
+    // Show answer and hide the show answer button
+    function showAnswer() {
+        document.getElementById("answer").style.display = "block";
+        document.getElementById("showAnswerBtn").style.display = "none"; // Hide the button after it's clicked
+    }
+
+    // Navigate to the next flashcard
+    function nextCard() {
+        if (currentCard < flashcards.length - 1) {
+            currentCard++;
+            renderCard();
+        }
+    }
+
+    // Navigate to the previous flashcard
+    function prevCard() {
+        if (currentCard > 0) {
+            currentCard--;
+            renderCard();
+        }
+    }
+
+    // Update progress bar based on the current card
+    function updateProgressBar() {
+        var progressElement = document.getElementById("progress");
+        var progressValue = ((currentCard + 1) / flashcards.length) * 100;
+        progressElement.value = progressValue;
+    }
+
+    // Initial rendering of the first card
+    renderCard();
+</script>
+
+</body>
+</html>

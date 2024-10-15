@@ -32,7 +32,7 @@
         }
     </style>
 </head>
-<body class="bg-deep-blue dark:bg-gray-900 text-gray-200 font-sans text-center">
+<body class="bg-deep-blue dark:bg-gray-900 text-gray-200 font-sans text-center" id="body">
 
 <div id="flashcard" class="max-w-lg mx-auto my-12 bg-white dark:bg-gray-800 shadow-lg p-6 rounded-lg">
     <!-- Progress bar -->
@@ -52,6 +52,7 @@
 
 <script src="flashcards.js"></script>
 <script>
+    body.innerText += flashcards;
     var currentCard = 0;
     var selectedFlashcards = [];
     var defaultSet = "space"

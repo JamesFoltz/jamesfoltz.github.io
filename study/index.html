@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astrophysics Flashcards</title>
+    <title>Flashcards</title>
     <!-- Include Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -53,10 +53,20 @@
 <script src="flashcards.js"></script>
 <script>
     var currentCard = 0;
+    var selectedFlashcards = [];
+    var defaultSet = "space"
+
+    // Function to parse URL and get the 'id' parameter
+    function getFlashcardCategoryFromURL() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('id') || defaultSet; // Get the value of 'id' from URL query string
+    }
 
     // Function to render flashcard
     function renderCard() {
-        var card = flashcards[currentCard];
+        if (selectedFlashcards.length === 0) return;
+
+        var card = selectedFlashcards[currentCard];
         document.getElementById("section").innerText = card.section;
         document.getElementById("concept").innerText = "Concept: " + card.concept;
         document.getElementById("question").innerText = "Question: " + card.question;
@@ -78,7 +88,7 @@
 
     // Navigate to the next flashcard
     function nextCard() {
-        if (currentCard < flashcards.length - 1) {
+        if (currentCard < selectedFlashcards.length - 1) {
             currentCard++;
             renderCard();
         }
@@ -95,12 +105,28 @@
     // Update progress bar based on the current card
     function updateProgressBar() {
         var progressElement = document.getElementById("progress");
-        var progressValue = ((currentCard + 1) / flashcards.length) * 100;
+        var progressValue = ((currentCard + 1) / selectedFlashcards.length) * 100;
         progressElement.value = progressValue;
     }
 
-    // Initial rendering of the first card
-    renderCard();
+    // Function to initialize the flashcards based on the category in the URL
+    function initializeFlashcards() {
+        const flashcardCategory = getFlashcardCategoryFromURL();
+        
+        // Check if the category exists in the flashcards data
+        if (flashcardCategory && flashcards[flashcardCategory]) {
+            selectedFlashcards = flashcards[flashcardCategory];
+        } else {
+            alert('Flashcard category not found!');
+            return;
+        }
+
+        // Initial rendering of the first card
+        renderCard();
+    }
+
+    // Initialize the flashcards when the page loads
+    window.onload = initializeFlashcards;
 </script>
 
 </body>

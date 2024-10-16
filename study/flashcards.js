@@ -127,18 +127,127 @@ var flashcards = {
             "answer": "Earth has a higher escape velocity because it has greater mass and stronger gravity than the Moon."
         }
     ],
-    "test": [
-        {
-            "section": "Test Section",
-            "concept": "Test Concept",
-            "question": "Test Question 1",
-            "answer": "Test Answer 1"
-        },
-        {
-            "section": "Test Section",
-            "concept": "Test Concept",
-            "question": "Test Question 2",
-            "answer": "Test Answer 2"
-        },
-    ]
+    "plate-tectonics": [
+    {
+        "section": "Plate Tectonics",
+        "concept": "Convergent Boundaries",
+        "question": "What occurs when two continental crust plates converge?",
+        "answer": "The plates collide and form large mountain ranges."
+    },
+    {
+        "section": "Plate Tectonics",
+        "concept": "Convergent Boundaries",
+        "question": "What occurs when two oceanic crust plates converge?",
+        "answer": "One of the plates is subducted, forming a deep-sea trench and volcanic islands."
+    },
+    {
+        "section": "Plate Tectonics",
+        "concept": "Seafloor Spreading",
+        "question": "What happens to the density of new seafloor as it cools?",
+        "answer": "The density of the new seafloor increases as it cools."
+    },
+    {
+        "section": "Plate Tectonics",
+        "concept": "Convergent Boundaries",
+        "question": "What occurs at an oceanic-oceanic convergent boundary?",
+        "answer": "One oceanic plate is subducted beneath the other, leading to the formation of a trench and a volcanic island arc."
+    },
+    {
+        "section": "Plate Tectonics",
+        "concept": "Seafloor Spreading",
+        "question": "Each cycle of spreading and intrusion of magma during seafloor spreading results in _________.",
+        "answer": "The formation of new oceanic crust."
+    },
+    {
+        "section": "Plate Tectonics",
+        "concept": "Divergent Boundaries",
+        "question": "Features found at divergent boundaries include ______________.",
+        "answer": "Mid-ocean ridges, rift valleys, and new oceanic crust."
+    },
+    {
+        "section": "Plate Tectonics",
+        "concept": "Continental-Continental Collisions",
+        "question": "Continental-continental plate collisions produce_______________________",
+        "answer": "Large mountain ranges, such as the Himalayas."
+    },
+    {
+        "section": "Plate Tectonics",
+        "concept": "Transform Boundaries",
+        "question": "Crust is neither created nor destroyed at what type of boundary?",
+        "answer": "Transform boundaries."
+    },
+    {
+        "section": "Plate Tectonics",
+        "concept": "Oceanic Features",
+        "question": "A narrow, elongated depression in the seafloor is called a ________________.",
+        "answer": "Trench."
+    },
+    {
+        "section": "Plate Tectonics",
+        "concept": "Transform Boundaries",
+        "question": "This type of boundary is characterized by long faults and shallow earthquakes.",
+        "answer": "Transform plate boundary."
+    },
+    {
+        "section": "Plate Tectonics",
+        "concept": "Plate Tectonics Theory",
+        "question": "What theory states that the Earth’s crust and rigid upper mantle are broken into enormous slabs called plates that move slowly over the Earth’s surface?",
+        "answer": "The theory of plate tectonics."
+    },
+    {
+        "section": "Plate Tectonics",
+        "concept": "Divergent Boundaries",
+        "question": "Places where plates move apart are called ________________.",
+        "answer": "Divergent boundaries."
+    },
+    {
+        "section": "Plate Tectonics",
+        "concept": "Subduction",
+        "question": "When one plate descends beneath another it is called ________________.",
+        "answer": "Subduction."
+    },
+    {
+        "section": "Plate Tectonics",
+        "concept": "Convergent Boundaries",
+        "question": "Plates come together at __________________.",
+        "answer": "Convergent boundaries."
+    },
+    {
+        "section": "Plate Tectonics",
+        "concept": "Oceanic-Oceanic Convergence",
+        "question": "Draw a diagram of an oceanic-oceanic plate convergence. What physical land feature forms here?",
+        "answer": "A volcanic island arc and a deep-sea trench form."
+    },
+    {
+        "section": "Plate Tectonics",
+        "concept": "Plate Tectonics Theory",
+        "question": "What is the theory of plate tectonics? Include the name of each layer, the general speed, direction, and fit of the plates.",
+        "answer": "The theory of plate tectonics explains that the Earth's lithosphere is divided into plates that move over the asthenosphere. Plates move at different speeds and directions, fitting together like a jigsaw puzzle."
+    },
+    {
+        "section": "Plate Tectonics",
+        "concept": "Oceanic-Continental Convergence",
+        "question": "Draw a diagram of an oceanic-continental convergent boundary. What physical land feature forms here?",
+        "answer": "A trench and a volcanic mountain range form along the continental margin."
+    },
+    {
+        "section": "Plate Tectonics",
+        "concept": "Continental-Continental Convergence",
+        "question": "Draw a diagram of continental-continental convergent boundary. What physical land feature forms here?",
+        "answer": "A large mountain range forms, such as the Himalayas."
+    },
+    {
+        "section": "Plate Tectonics",
+        "concept": "Divergent Boundaries",
+        "question": "Draw a diagram of a divergent boundary. What physical feature forms here?",
+        "answer": "A mid-ocean ridge or rift valley forms."
+    },
+    {
+        "section": "Plate Tectonics",
+        "concept": "Transform Boundaries",
+        "question": "Draw a diagram of a transform plate boundary. What often occurs at this type of boundary?",
+        "answer": "Earthquakes often occur along transform boundaries."
+    }
+]
+
 };

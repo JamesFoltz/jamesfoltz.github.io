@@ -5,11 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Theatre Play PDFs</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Custom Dark Sepia Colors */
+    .bg-sepia {
+      background-color: #3a3127;
+    }
+    .text-sepia {
+      color: #f4e0c4;
+    }
+    .text-sepia-link {
+      color: #d9b67a;
+    }
+    .text-sepia-link:hover {
+      color: #e5c29f;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-sepia text-sepia font-sans min-h-screen flex items-center justify-center">
 
   <div class="container mx-auto py-12">
-    <h1 class="text-4xl font-bold text-center text-blue-600 mb-8">Theatre Play PDFs</h1>
+    <h1 class="text-4xl font-bold text-center mb-8 text-sepia">Theatre Play PDFs</h1>
     <div id="playList" class="space-y-4 max-w-3xl mx-auto">
       <!-- Links will be populated here by JavaScript -->
     </div>
@@ -31,7 +46,7 @@
       const [title, url] = Object.entries(play)[0];
       const linkElement = document.createElement('a');
       linkElement.href = url;
-      linkElement.className = "block p-4 bg-white rounded-lg shadow hover:bg-blue-50 border border-gray-300 text-lg font-semibold text-blue-600";
+      linkElement.className = "block p-4 bg-opacity-20 rounded-lg shadow-lg hover:bg-opacity-30 border border-gray-600 text-lg font-semibold text-sepia-link";
       linkElement.textContent = title;
       playList.appendChild(linkElement);
     });

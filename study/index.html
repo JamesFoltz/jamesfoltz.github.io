@@ -6,18 +6,20 @@
     <title>Flashcards</title>
     <style>
         body {
-            background-color: #1E3A8A;
+            background-color: #111827;
             color: #E5E7EB;
             font-family: sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
+            
         }
 
         #flashcard {
             max-width: 32rem;
             margin: 3rem auto;
-            background-color: white;
+            background-color: #1F2937;
+            color: #E5E7EB;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             padding: 1.5rem;
             border-radius: 0.5rem;
@@ -65,33 +67,17 @@
         }
 
         button:not(#showAnswerBtn) {
-            background-color: #D1D5DB;
-            color: black;
+            background-color: #4B5563;
+            color: white;
         }
 
         button:not(#showAnswerBtn):hover {
-            background-color: #9CA3AF;
+            background-color: #6B7280;
         }
 
-        @media (prefers-color-scheme: dark) {
-            body {
-                background-color: #111827;
-            }
 
-            #flashcard {
-                background-color: #1F2937;
-                color: #E5E7EB;
-            }
 
-            button:not(#showAnswerBtn) {
-                background-color: #4B5563;
-                color: white;
-            }
 
-            button:not(#showAnswerBtn):hover {
-                background-color: #6B7280;
-            }
-        }
     </style>
 </head>
 <body id="body">

@@ -485,12 +485,6 @@ var flashcards = {
         "answer": "Parallel lines have the same slope."
       },
       {
-        "section": "Number Theory",
-        "concept": "Prime Factorization",
-        "question": "What is prime factorization?",
-        "answer": "It is the process of expressing a composite number as a product of prime numbers."
-      },
-      {
         "section": "Algebra",
         "concept": "Factoring",
         "question": "What is the goal of factoring in algebra?",

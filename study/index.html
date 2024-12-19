@@ -9,52 +9,54 @@
             background-color: #111827;
             color: #E5E7EB;
             font-family: sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
-            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         #flashcard {
-            max-width: 32rem;
-            margin: 3rem auto;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             background-color: #1F2937;
-            color: #E5E7EB;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            padding: 1.5rem;
+            padding: 2rem;
             border-radius: 0.5rem;
         }
 
         #progress {
-            width: 100%;
-            height: 0.5rem;
-            margin-bottom: 1rem;
+            width: 90%;
+            height: 1rem;
             background-color: #6D28D9;
             border-radius: 9999px;
+            margin-bottom: 1.5rem;
         }
 
         #section {
-            font-size: 1.25rem;
+            font-size: 3vw;
             font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        #concept {
-            font-size: 1.125rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
         }
 
         #question, #answer {
-            font-size: 1rem;
-            margin-bottom: 1rem;
+            font-size: 2.5vw;
+            text-align: center;
+            margin-bottom: 2rem;
         }
 
         button {
-            padding: 0.5rem 1rem;
+            font-size: 2vw;
+            padding: 1rem 2rem;
             border: none;
             border-radius: 0.375rem;
             cursor: pointer;
-            margin: 0 0.5rem;
+            margin: 0 1rem;
         }
 
         #showAnswerBtn {
@@ -74,20 +76,16 @@
         button:not(#showAnswerBtn):hover {
             background-color: #6B7280;
         }
-
-
-
-
     </style>
 </head>
-<body id="body">
+<body>
 
 <div id="flashcard">
     <progress id="progress" value="0" max="100"></progress>
 
-    <h2 id="section"></h2>
-    <div id="question"></div>
-    <div id="answer" style="display: none;"></div>
+    <h2 id="section">Section Title</h2>
+    <div id="question">This is a sample question. What is the answer?</div>
+    <div id="answer" style="display: none;">This is the answer to the question.</div>
 
     <div>
         <button id="showAnswerBtn" onclick="showAnswer()">Show Answer</button>
@@ -95,7 +93,6 @@
         <button onclick="nextCard()">Next</button>
     </div>
 </div>
-
 <script src="flashcards.js"></script>
 <script>
     var currentCard = 0;

@@ -497,12 +497,6 @@ var flashcards = {
         "answer": "The goal is to express a polynomial as a product of its factors."
       },
       {
-        "section": "Functions",
-        "concept": "Inverse Functions",
-        "question": "What is the relationship between a function and its inverse?",
-        "answer": "The inverse function 'undoes' what the original function does, effectively swapping the input and output."
-      },
-      {
         "section": "Geometry",
         "concept": "Similar Triangles",
         "question": "What defines similar triangles?",

@@ -90,11 +90,8 @@
             background-color: #6B7280;
         }
 
-        /* Mobile adjustments */
-        @media (max-width: 768px) {
-            :root{
-                overflow-y: scroll;
-            }
+        /* Aspect Ratio for Mobile */
+        @media (aspect-ratio: 1/1), (max-aspect-ratio: 1/1) {
             #section {
                 font-size: 5vw;
             }
@@ -103,14 +100,15 @@
                 font-size: 4vw;
             }
 
-            button {
-                font-size: 4vw;
-                width: 100%;
-            }
-
             .button-container {
                 flex-direction: column;
                 gap: 1rem;
+                width: 100%;
+            }
+
+            button {
+                font-size: 4vw;
+                width: 100%;
             }
         }
     </style>

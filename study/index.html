@@ -86,7 +86,6 @@
     <progress id="progress" value="0" max="100"></progress>
 
     <h2 id="section"></h2>
-    <p id="concept"></p>
     <div id="question"></div>
     <div id="answer" style="display: none;"></div>
 
@@ -120,7 +119,6 @@ function renderCard() {
 
     var card = selectedFlashcards[currentCard];
     document.getElementById("section").innerText = card.section;
-    document.getElementById("concept").innerText = "Concept: " + card.concept;
     document.getElementById("question").innerText = "Question: " + card.question;
     document.getElementById("answer").innerText = "Answer: " + card.answer;
     document.getElementById("answer").style.display = "none";

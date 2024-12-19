@@ -435,6 +435,96 @@ var flashcards = {
             "concept": "End Behavior",
             "question": "What does the 'end behavior' of a function describe?",
             "answer": "It describes how the graph behaves as inputs decrease forever and increase forever."
-        }
+        },
+        {
+        "section": "Algebra Basics",
+        "concept": "Implicit Multiplication",
+        "question": "What does 2x mean in algebraic notation?",
+        "answer": "It means 2 multiplied by x, where 2 is the coefficient of x."
+      },
+      {
+        "section": "Properties of Operations",
+        "concept": "Distributive Property",
+        "question": "What does the distributive property state?",
+        "answer": "It states that a(b + c) = ab + ac, where multiplication is distributed over addition."
+      },
+      {
+        "section": "Order of Operations",
+        "concept": "PEMDAS",
+        "question": "What does the acronym PEMDAS stand for in mathematics?",
+        "answer": "It stands for Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)."
+      },
+      {
+        "section": "Exponents",
+        "concept": "Negative Exponents",
+        "question": "What does a negative exponent indicate?",
+        "answer": "It indicates the reciprocal of the base raised to the positive of that exponent, e.g., x^(-n) = 1/(x^n)."
+      },
+      {
+        "section": "Complex Numbers",
+        "concept": "Complex Plane",
+        "question": "How are complex numbers represented graphically?",
+        "answer": "They are represented on a complex plane, where the real part is on the x-axis and the imaginary part on the y-axis."
+      },
+      {
+        "section": "Trigonometry",
+        "concept": "Reciprocal Trigonometric Functions",
+        "question": "What are the reciprocal trigonometric functions of sine, cosine, and tangent?",
+        "answer": "They are cosecant (csc), secant (sec), and cotangent (cot) respectively."
+      },
+      {
+        "section": "Calculus",
+        "concept": "Limit",
+        "question": "What does a limit in calculus describe?",
+        "answer": "It describes the value that a function approaches as the input approaches a particular value."
+      },
+      {
+        "section": "Statistics",
+        "concept": "Standard Deviation",
+        "question": "What does standard deviation measure in a dataset?",
+        "answer": "It measures the amount of variation or dispersion of a set of values from their mean."
+      },
+      {
+        "section": "Geometry",
+        "concept": "Parallel Lines",
+        "question": "What is true about the slopes of parallel lines?",
+        "answer": "Parallel lines have the same slope."
+      },
+      {
+        "section": "Number Theory",
+        "concept": "Prime Factorization",
+        "question": "What is prime factorization?",
+        "answer": "It is the process of expressing a composite number as a product of prime numbers."
+      },
+      {
+        "section": "Algebra",
+        "concept": "Factoring",
+        "question": "What is the goal of factoring in algebra?",
+        "answer": "The goal is to express a polynomial as a product of its factors."
+      },
+      {
+        "section": "Functions",
+        "concept": "Inverse Functions",
+        "question": "What is the relationship between a function and its inverse?",
+        "answer": "The inverse function 'undoes' what the original function does, effectively swapping the input and output."
+      },
+      {
+        "section": "Geometry",
+        "concept": "Similar Triangles",
+        "question": "What defines similar triangles?",
+        "answer": "Similar triangles have the same shape but not necessarily the same size, with corresponding angles equal and sides proportional."
+      },
+      {
+        "section": "Calculus",
+        "concept": "Derivative",
+        "question": "What does the derivative of a function represent geometrically?",
+        "answer": "It represents the slope of the tangent line to the function's graph at a given point."
+      },
+      {
+        "section": "Probability",
+        "concept": "Mutually Exclusive Events",
+        "question": "What are mutually exclusive events in probability?",
+        "answer": "They are events that cannot occur simultaneously in a single trial of an experiment."
+      }
     ]
 };

@@ -467,6 +467,18 @@ var flashcards = {
         "answer": "They are represented on a complex plane, where the real part is on the x-axis and the imaginary part on the y-axis."
       },
       {
+        "section": "Calculus",
+        "concept": "Limit",
+        "question": "What does a limit in calculus describe?",
+        "answer": "It describes the value that a function approaches as the input approaches a particular value."
+      },
+      {
+        "section": "Statistics",
+        "concept": "Standard Deviation",
+        "question": "What does standard deviation measure in a dataset?",
+        "answer": "It measures the amount of variation or dispersion of a set of values from their mean."
+      },
+      {
         "section": "Geometry",
         "concept": "Parallel Lines",
         "question": "What is true about the slopes of parallel lines?",
@@ -491,11 +503,10 @@ var flashcards = {
         "answer": "Similar triangles have the same shape but not necessarily the same size, with corresponding angles equal and sides proportional."
       },
       {
-      {
-        "section": "Probability",
-        "concept": "Mutually Exclusive Events",
-        "question": "What are mutually exclusive events in probability?",
-        "answer": "They are events that cannot occur simultaneously in a single trial of an experiment."
+        "section": "Calculus",
+        "concept": "Derivative",
+        "question": "What does the derivative of a function represent geometrically?",
+        "answer": "It represents the slope of the tangent line to the function's graph at a given point."
       }
     ]
 };

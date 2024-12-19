@@ -467,12 +467,6 @@ var flashcards = {
         "answer": "They are represented on a complex plane, where the real part is on the x-axis and the imaginary part on the y-axis."
       },
       {
-        "section": "Trigonometry",
-        "concept": "Reciprocal Trigonometric Functions",
-        "question": "What are the reciprocal trigonometric functions of sine, cosine, and tangent?",
-        "answer": "They are cosecant (csc), secant (sec), and cotangent (cot) respectively."
-      },
-      {
         "section": "Calculus",
         "concept": "Limit",
         "question": "What does a limit in calculus describe?",

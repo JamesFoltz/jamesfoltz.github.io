@@ -100,67 +100,76 @@
 <script src="flashcards.js"></script>
 <script>
     var currentCard = 0;
-    var selectedFlashcards = [];
-    var defaultSet = "math"
+var selectedFlashcards = [];
+var defaultSet = "math"
 
-    function getFlashcardCategoryFromURL() {
-        const params = new URLSearchParams(window.location.search);
-        return params.get('set') || defaultSet;
+function getFlashcardCategoryFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('set') || defaultSet;
+}
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
+}
 
-    function renderCard() {
-        if (selectedFlashcards.length === 0) return;
+function renderCard() {
+    if (selectedFlashcards.length === 0) return;
 
-        var card = selectedFlashcards[currentCard];
-        document.getElementById("section").innerText = card.section;
-        document.getElementById("concept").innerText = "Concept: " + card.concept;
-        document.getElementById("question").innerText = "Question: " + card.question;
-        document.getElementById("answer").innerText = "Answer: " + card.answer;
-        document.getElementById("answer").style.display = "none";
-        document.getElementById("showAnswerBtn").style.display = "inline-block";
+    var card = selectedFlashcards[currentCard];
+    document.getElementById("section").innerText = card.section;
+    document.getElementById("concept").innerText = "Concept: " + card.concept;
+    document.getElementById("question").innerText = "Question: " + card.question;
+    document.getElementById("answer").innerText = "Answer: " + card.answer;
+    document.getElementById("answer").style.display = "none";
+    document.getElementById("showAnswerBtn").style.display = "inline-block";
 
-        updateProgressBar();
-    }
+    updateProgressBar();
+}
 
-    function showAnswer() {
-        document.getElementById("answer").style.display = "block";
-        document.getElementById("showAnswerBtn").style.display = "none";
-    }
+function showAnswer() {
+    document.getElementById("answer").style.display = "block";
+    document.getElementById("showAnswerBtn").style.display = "none";
+}
 
-    function nextCard() {
-        if (currentCard < selectedFlashcards.length - 1) {
-            currentCard++;
-            renderCard();
-        }
-    }
-
-    function prevCard() {
-        if (currentCard > 0) {
-            currentCard--;
-            renderCard();
-        }
-    }
-
-    function updateProgressBar() {
-        var progressElement = document.getElementById("progress");
-        var progressValue = ((currentCard + 1) / selectedFlashcards.length) * 100;
-        progressElement.value = progressValue;
-    }
-
-    function initializeFlashcards() {
-        const flashcardCategory = getFlashcardCategoryFromURL();
-        
-        if (flashcardCategory && flashcards[flashcardCategory]) {
-            selectedFlashcards = flashcards[flashcardCategory];
-        } else {
-            alert('Flashcard category not found!');
-            return;
-        }
-
+function nextCard() {
+    if (currentCard < selectedFlashcards.length - 1) {
+        currentCard++;
         renderCard();
     }
+}
 
-    window.onload = initializeFlashcards;
+function prevCard() {
+    if (currentCard > 0) {
+        currentCard--;
+        renderCard();
+    }
+}
+
+function updateProgressBar() {
+    var progressElement = document.getElementById("progress");
+    var progressValue = ((currentCard + 1) / selectedFlashcards.length) * 100;
+    progressElement.value = progressValue;
+}
+
+function initializeFlashcards() {
+    const flashcardCategory = getFlashcardCategoryFromURL();
+    
+    if (flashcardCategory && flashcards[flashcardCategory]) {
+        selectedFlashcards = [...flashcards[flashcardCategory]]; // Create a copy of the array
+        shuffleArray(selectedFlashcards); // Shuffle the copy
+    } else {
+        alert('Flashcard category not found!');
+        return;
+    }
+
+    renderCard();
+}
+
+window.onload = initializeFlashcards;
+
 </script>
 
 </body>

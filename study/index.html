@@ -159,7 +159,9 @@ function initializeFlashcards() {
     
     if (flashcardCategory && flashcards[flashcardCategory]) {
         selectedFlashcards = [...flashcards[flashcardCategory]]; // Create a copy of the array
-        shuffleArray(selectedFlashcards); // Shuffle the copy
+        shuffleArray(selectedFlashcards);
+        shuffleArray(selectedFlashcards);
+        shuffleArray(selectedFlashcards);
     } else {
         alert('Flashcard category not found!');
         return;

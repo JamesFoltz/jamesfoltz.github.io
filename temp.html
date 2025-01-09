@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Dev Page with EditArea</title>
+    <script src="https://cdolivet.com/editarea/editarea/edit_area/edit_area_full.js"></script>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            display: flex;
+        }
+        #editor, #preview {
+            width: 50%;
+            height: 100%;
+
+        }
+        #preview {
+            padding: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <textarea id="editor"></textarea>
+    <div id="preview"></div>
+
+    <script>
+        editAreaLoader.init({
+            id: "editor",
+            syntax: "html",
+            start_highlight: true,
+            allow_resize: "no",
+            allow_toggle: false,
+            word_wrap: true,
+        });
+
+        function updatePreview() {
+            const code = "<div>" + editAreaLoader.getValue("editor") + "</div>";
+            const previewFrame = document.getElementById('preview');
+            previewFrame.innerHTML = code;
+        }
+
+        setInterval(updatePreview, 50);
+    </script>
+</body>
+</html>

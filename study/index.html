@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashcards</title>
     <style>
-               :root{
+        :root {
             margin: 0;
             padding: 0;
             overflow: hidden;
         }
+
         body {
             background-color: #111827;
             color: #E5E7EB;
@@ -49,7 +50,8 @@
             text-align: center;
         }
 
-        #question, #answer {
+        #question,
+        #answer {
             font-size: 2vw;
             text-align: center;
             margin-bottom: 2rem;
@@ -92,12 +94,14 @@
         }
 
         /* Aspect Ratio for Mobile */
-        @media (aspect-ratio: 1/1), (max-aspect-ratio: 1/1) {
+        @media (aspect-ratio: 1/1),
+        (max-aspect-ratio: 1/1) {
             #section {
                 font-size: 5vw;
             }
 
-            #question, #answer {
+            #question,
+            #answer {
                 font-size: 4vw;
             }
 
@@ -121,9 +125,12 @@
         <progress id="progress" value="0" max="100"></progress>
 
         <h2 id="section">Render Error</h2>
-        <div id="question"><p>JS disabled or dev error.
-            <br><a href="https://github.com/JamesFoltz/jamesfoltz.github.io/issues/new" target="_blank" rel="noopener noreferrer">Report issue</a> as "Flashcard Render Error".
-            <br>Include console errors if possible.</p>            
+        <div id="question">
+            <p>JS disabled or dev error.
+                <br><a href="https://github.com/JamesFoltz/jamesfoltz.github.io/issues/new" target="_blank"
+                    rel="noopener noreferrer">Report issue</a> as "Flashcard Render Error".
+                <br>Include console errors if possible.
+            </p>
         </div>
         <div id="answer" style="display: none;">This is the answer to the question.</div>
 
@@ -217,7 +224,7 @@
             } else if (e.key == "ArrowLeft") {
                 prevCard();
                 return;
-            }else if (e.key == "ArrowRight") {
+            } else if (e.key == "ArrowRight") {
                 nextCard();
                 return;
             }

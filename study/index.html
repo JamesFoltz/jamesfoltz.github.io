@@ -200,6 +200,26 @@ function initializeFlashcards() {
     renderCard();
 }
 
+onkeydown = (e) => {
+    if (e.key == " ") {
+        if (document.getElementById("answer").style.display != "block") {
+            showAnswer();
+            return;
+        } else {
+            nextCard();
+            return;
+        }
+    }
+    if (e.key == "ArrowLeft") {
+        prevCard();
+        return;
+    }
+    if (e.key = "ArrowRight") {
+        nextCard();
+        return;
+    }
+})
+
 window.onload = initializeFlashcards;
 
 </script>

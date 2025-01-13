@@ -132,11 +132,11 @@
 <script>
     var currentCard = 0;
 var selectedFlashcards = [];
-var defaultSet = "math"
+var defaultSet = "chemistry"
 
 function getFlashcardCategoryFromURL() {
     const params = new URLSearchParams(window.location.search);
-    return params.get('set') || defaultSet;
+    return params.get('deck') || defaultSet;
 }
 
 function shuffleArray(array) {

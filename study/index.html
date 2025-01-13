@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -114,26 +113,21 @@
         }
     </style>
 </head>
-
 <body>
 
-    <div id="flashcard showMe">
-        <progress id="progress" value="0" max="100"></progress>
+<div id="flashcard">
+    <progress id="progress" value="0" max="100"></progress>
 
-        <h2 id="section">Render Error</h2>
-        <div id="question">JS disabled or dev error.
-            <br><a href="https://github.com/JamesFoltz/jamesfoltz.github.io/issues/new" target="_blank"
-                rel="noopener noreferrer">Report issue</a> as "Flashcard Render Error".
-            <br>Include console errors if possible.
-        </div>
-        <div id="answer" style="display: none;">This is the answer to the question.</div>
+    <h2 id="section">Section Title</h2>
+    <div id="question">This is a sample question. What is the answer?</div>
+    <div id="answer" style="display: none;">This is the answer to the question.</div>
 
-        <div>
-            <button id="showAnswerBtn" onclick="showAnswer()">Show Answer</button>
-            <button onclick="prevCard()">Previous</button>
-            <button onclick="nextCard()">Next</button>
-        </div>
+    <div>
+        <button id="showAnswerBtn" onclick="showAnswer()">Show Answer</button>
+        <button onclick="prevCard()">Previous</button>
+        <button onclick="nextCard()">Next</button>
     </div>
+</div>
     <script src="flashcards.js"></script>
     <script>
         var currentCard = 0;
@@ -206,7 +200,7 @@
             renderCard();
         }
 
-        onkeydown = (e) => {
+        document.addEventListener("keydown", (e) => {
             if (e.key == " ") {
                 if (document.getElementById("answer").style.display != "block") {
                     showAnswer();
@@ -222,7 +216,7 @@
                 nextCard();
                 return;
             }
-        };
+        });
 
         window.onload = initializeFlashcards;
 

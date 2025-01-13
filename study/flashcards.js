@@ -1,4 +1,11 @@
 var flashcards = {
+    "example":[
+        {
+            "section": "Example Section",
+            "question": "What is 1+1?",
+            "answer": "2"
+        },
+    ],
     "space": [
         {
             "section": "Observational Astronomy",
@@ -412,5 +419,269 @@ var flashcards = {
         "question": "What defines similar triangles?",
         "answer": "Similar triangles have the same shape but not necessarily the same size, with corresponding angles equal and sides proportional."
       }
-    ]
+    ],
+    "chemistry":[
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Hydrogen?",
+        "answer": "H"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Helium?",
+        "answer": "He"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Lithium?",
+        "answer": "Li"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Beryllium?",
+        "answer": "Be"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Boron?",
+        "answer": "B"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Carbon?",
+        "answer": "C"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Nitrogen?",
+        "answer": "N"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Oxygen?",
+        "answer": "O"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Fluorine?",
+        "answer": "F"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Neon?",
+        "answer": "Ne"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Sodium?",
+        "answer": "Na"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Magnesium?",
+        "answer": "Mg"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Aluminium?",
+        "answer": "Al"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Silicon?",
+        "answer": "Si"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Phosphorus?",
+        "answer": "P"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Sulphur?",
+        "answer": "S"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Chlorine?",
+        "answer": "Cl"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Argon?",
+        "answer": "Ar"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Potassium?",
+        "answer": "K"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Calcium?",
+        "answer": "Ca"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Gold?",
+        "answer": "Au"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Silver?",
+        "answer": "Ag"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Bromine?",
+        "answer": "Br"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Iodine?",
+        "answer": "I"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Lead?",
+        "answer": "Pb"
+    },
+    {
+        "section": "Elements",
+        "question": "What is the symbol for Mercury?",
+        "answer": "Hg"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol H?",
+        "answer": "Hydrogen"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol He?",
+        "answer": "Helium"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol Li?",
+        "answer": "Lithium"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol Be?",
+        "answer": "Beryllium"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol B?",
+        "answer": "Boron"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol C?",
+        "answer": "Carbon"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol N?",
+        "answer": "Nitrogen"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol O?",
+        "answer": "Oxygen"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol F?",
+        "answer": "Fluorine"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol Ne?",
+        "answer": "Neon"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol Na?",
+        "answer": "Sodium"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol Mg?",
+        "answer": "Magnesium"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol Al?",
+        "answer": "Aluminium"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol Si?",
+        "answer": "Silicon"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol P?",
+        "answer": "Phosphorus"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol S?",
+        "answer": "Sulphur"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol Cl?",
+        "answer": "Chlorine"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol Ar?",
+        "answer": "Argon"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol K?",
+        "answer": "Potassium"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol Ca?",
+        "answer": "Calcium"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol Au?",
+        "answer": "Gold"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol Ag?",
+        "answer": "Silver"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol Br?",
+        "answer": "Bromine"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol I?",
+        "answer": "Iodine"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol Pb?",
+        "answer": "Lead"
+    },
+    {
+        "section": "Elements",
+        "question": "What element has the symbol Hg?",
+        "answer": "Mercury"
+    }
+]
+
+
 };

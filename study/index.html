@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashcards</title>
     <style>
-        :root{
+        :root {
             margin: 0;
             padding: 0;
             overflow: hidden;
         }
+
         body {
             background-color: #111827;
             color: #E5E7EB;
@@ -48,7 +50,8 @@
             text-align: center;
         }
 
-        #question, #answer {
+        #question,
+        #answer {
             font-size: 2vw;
             text-align: center;
             margin-bottom: 2rem;
@@ -91,12 +94,14 @@
         }
 
         /* Aspect Ratio for Mobile */
-        @media (aspect-ratio: 1/1), (max-aspect-ratio: 1/1) {
+        @media (aspect-ratio: 1/1),
+        (max-aspect-ratio: 1/1) {
             #section {
                 font-size: 5vw;
             }
 
-            #question, #answer {
+            #question,
+            #answer {
                 font-size: 4vw;
             }
 
@@ -111,118 +116,136 @@
                 width: 100%;
             }
         }
+
+        #showMe {
+            animation: cssAnimation 0s 0.5s forwards;
+            visibility: hidden;
+        }
+
+        @keyframes cssAnimation {
+            to {
+                visibility: visible;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-<div id="flashcard">
-    <progress id="progress" value="0" max="100"></progress>
+    <div id="flashcard showMe">
+        <progress id="progress" value="0" max="100"></progress>
 
-    <h2 id="section">Section Title</h2>
-    <div id="question">This is a sample question. What is the answer?</div>
-    <div id="answer" style="display: none;">This is the answer to the question.</div>
+        <h2 id="section">Render Error</h2>
+        <div id="question">Seeing this means you either have javascript disabled, or the developer has seriously F***ed
+            up.
+            <br> Please submit an issue <a href="https://github.com/JamesFoltz/jamesfoltz.github.io/issues/new"
+                target="_blank" rel="noopener noreferrer">here</a> with the title of "Flashcard Render Error".
+            <br>If you know how, please include any relavant error messages produced in the developer console.
+        </div>
+        <div id="answer" style="display: none;">This is the answer to the question.</div>
 
-    <div>
-        <button id="showAnswerBtn" onclick="showAnswer()">Show Answer</button>
-        <button onclick="prevCard()">Previous</button>
-        <button onclick="nextCard()">Next</button>
+        <div>
+            <button id="showAnswerBtn" onclick="showAnswer()">Show Answer</button>
+            <button onclick="prevCard()">Previous</button>
+            <button onclick="nextCard()">Next</button>
+        </div>
     </div>
-</div>
-<script src="flashcards.js"></script>
-<script>
-    var currentCard = 0;
-var selectedFlashcards = [];
-var defaultSet = "chemistry"
+    <script src="flashcards.js"></script>
+    <script>
+        var currentCard = 0;
+        var selectedFlashcards = [];
+        var defaultSet = "chemistry"
 
-function getFlashcardCategoryFromURL() {
-    const params = new URLSearchParams(window.location.search);
-    return params.get('deck') || defaultSet;
-}
-
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-}
-
-function renderCard() {
-    if (selectedFlashcards.length === 0) return;
-
-    var card = selectedFlashcards[currentCard];
-    document.getElementById("section").innerText = card.section;
-    document.getElementById("question").innerText = "Question: " + card.question;
-    document.getElementById("answer").innerText = "Answer: " + card.answer;
-    document.getElementById("answer").style.display = "none";
-    document.getElementById("showAnswerBtn").style.display = "inline-block";
-
-    updateProgressBar();
-}
-
-function showAnswer() {
-    document.getElementById("answer").style.display = "block";
-    document.getElementById("showAnswerBtn").style.display = "none";
-}
-
-function nextCard() {
-    if (currentCard < selectedFlashcards.length - 1) {
-        currentCard++;
-        renderCard();
-    }
-}
-
-function prevCard() {
-    if (currentCard > 0) {
-        currentCard--;
-        renderCard();
-    }
-}
-
-function updateProgressBar() {
-    var progressElement = document.getElementById("progress");
-    var progressValue = ((currentCard + 1) / selectedFlashcards.length) * 100;
-    progressElement.value = progressValue;
-}
-
-function initializeFlashcards() {
-    const flashcardCategory = getFlashcardCategoryFromURL();
-    
-    if (flashcardCategory && flashcards[flashcardCategory]) {
-        selectedFlashcards = [...flashcards[flashcardCategory]]; // Create a copy of the array
-        shuffleArray(selectedFlashcards);
-        shuffleArray(selectedFlashcards);
-        shuffleArray(selectedFlashcards);
-    } else {
-        alert('Flashcard category not found!');
-        return;
-    }
-
-    renderCard();
-}
-
-onkeydown = (e) => {
-    if (e.key == " ") {
-        if (document.getElementById("answer").style.display != "block") {
-            showAnswer();
-            return;
-        } else {
-            nextCard();
-            return;
+        function getFlashcardCategoryFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('deck') || defaultSet;
         }
-    }
-    if (e.key == "ArrowLeft") {
-        prevCard();
-        return;
-    }
-    if (e.key = "ArrowRight") {
-        nextCard();
-        return;
-    }
-};
 
-window.onload = initializeFlashcards;
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
 
-</script>
+        function renderCard() {
+            if (selectedFlashcards.length === 0) return;
+
+            var card = selectedFlashcards[currentCard];
+            document.getElementById("section").innerText = card.section;
+            document.getElementById("question").innerText = "Question: " + card.question;
+            document.getElementById("answer").innerText = "Answer: " + card.answer;
+            document.getElementById("answer").style.display = "none";
+            document.getElementById("showAnswerBtn").style.display = "inline-block";
+
+            updateProgressBar();
+        }
+
+        function showAnswer() {
+            document.getElementById("answer").style.display = "block";
+            document.getElementById("showAnswerBtn").style.display = "none";
+        }
+
+        function nextCard() {
+            if (currentCard < selectedFlashcards.length - 1) {
+                currentCard++;
+                renderCard();
+            }
+        }
+
+        function prevCard() {
+            if (currentCard > 0) {
+                currentCard--;
+                renderCard();
+            }
+        }
+
+        function updateProgressBar() {
+            var progressElement = document.getElementById("progress");
+            var progressValue = ((currentCard + 1) / selectedFlashcards.length) * 100;
+            progressElement.value = progressValue;
+        }
+
+        function initializeFlashcards() {
+            const flashcardCategory = getFlashcardCategoryFromURL();
+
+            if (flashcardCategory && flashcards[flashcardCategory]) {
+                selectedFlashcards = [...flashcards[flashcardCategory]]; // Create a copy of the array
+                shuffleArray(selectedFlashcards);
+                shuffleArray(selectedFlashcards);
+                shuffleArray(selectedFlashcards);
+            } else {
+                alert('Flashcard category not found!');
+                return;
+            }
+
+            renderCard();
+        }
+
+        onkeydown = (e) => {
+            if (e.key == " ") {
+                if (document.getElementById("answer").style.display != "block") {
+                    showAnswer();
+                    return;
+                } else {
+                    nextCard();
+                    return;
+                }
+            }
+            if (e.key == "ArrowLeft") {
+                prevCard();
+                return;
+            }
+            if (e.key = "ArrowRight") {
+                nextCard();
+                return;
+            }
+        };
+
+        window.onload = initializeFlashcards;
+
+    </script>
 
 </body>
+
 </html>

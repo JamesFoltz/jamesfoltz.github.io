@@ -267,12 +267,8 @@
             initializeFlashcards();
         };
 
-        document.querySelectorAll('button').addEventListener('focus', function(event) {
-            if (event.relatedTarget) {
-                event.relatedTarget.focus();
-            } else {
-                this.blur();
-            }
+        document.querySelectorAll('button').addEventListener('keydown', function(event) {
+            event.preventDefault();
         });
 
     </script>

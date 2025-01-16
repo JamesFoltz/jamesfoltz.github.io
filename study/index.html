@@ -147,6 +147,7 @@
 </div>
     <script src="flashcards.js"></script>
     <script>
+        var keyDown = false
         var currentCard = 0;
         var selectedFlashcards = [];
         var defaultSet = "chemistry"
@@ -237,22 +238,27 @@
         }
 
         document.addEventListener("keydown", (e) => {
-            if (e.key == " ") {
-                if (document.getElementById("answer").style.display != "block") {
-                    showAnswer();
+            if (!keyDown){
+                keyDown = true;
+                if (e.key == " ") {
+                    if (document.getElementById("answer").style.display != "block") {
+                        showAnswer();
+                        return;
+                    } else {
+                        nextCard();
+                        return;
+                    }
+                } else if (e.key == "ArrowLeft") {
+                    prevCard();
                     return;
-                } else {
+                } else if (e.key == "ArrowRight") {
                     nextCard();
                     return;
                 }
-            } else if (e.key == "ArrowLeft") {
-                prevCard();
-                return;
-            } else if (e.key == "ArrowRight") {
-                nextCard();
-                return;
             }
         });
+
+        document.addEventListener("keyup", keyDown = false);
 
         window.onload = function() {
             populateDeckSelector();

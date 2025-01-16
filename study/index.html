@@ -258,7 +258,9 @@
             }
         });
 
-        document.addEventListener("keyup", keyDown = false);
+        document.addEventListener("keyup",(e) => {
+            keyDown = false
+        });
 
         window.onload = function() {
             populateDeckSelector();

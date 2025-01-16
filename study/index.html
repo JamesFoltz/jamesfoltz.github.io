@@ -70,7 +70,6 @@
             border-radius: 0.375rem;
             cursor: pointer;
             min-width: 8rem;
-            pointer-events: none;
         }
 
         #showAnswerBtn {
@@ -267,6 +266,14 @@
             populateDeckSelector();
             initializeFlashcards();
         };
+
+        document.querySelectorAll('button').addEventListener('focus', function(event) {
+            if (event.relatedTarget) {
+                event.relatedTarget.focus();
+            } else {
+                this.blur();
+            }
+        });
 
     </script>
 

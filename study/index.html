@@ -242,6 +242,7 @@
             if (!keyDown){
                 keyDown = true;
                 if (e.key == " ") {
+                    e.preventDefault();
                     if (document.getElementById("answer").style.display != "block") {
                         showAnswer();
                         return;
@@ -250,9 +251,11 @@
                         return;
                     }
                 } else if (e.key == "ArrowLeft") {
+                    e.preventDefault();
                     prevCard();
                     return;
                 } else if (e.key == "ArrowRight") {
+                    e.preventDefault();
                     nextCard();
                     return;
                 }

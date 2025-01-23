@@ -10,52 +10,52 @@ var flashcards = {
     {
         "section": "Fundamental Rules",
         "question": "Product Rule?",
-        "answer": "log_a(xy) = log_a(x) + log_a(y)\n\nExample: log_2(8 * 4) = log_2(8) + log_2(4) = 3 + 2 = 5"
+        "answer": "log<sub>a</sub>(xy) = log<sub>a</sub>(x) + log<sub>a</sub>(y)\n\nExample: log<sub>2</sub>(8 * 4) = log<sub>2</sub>(8) + log<sub>2</sub>(4) = 3 + 2 = 5"
     },
     {
         "section": "Fundamental Rules",
         "question": "Quotient Rule?",
-        "answer": "log_a(x/y) = log_a(x) - log_a(y)\n\nExample: log_3(27/9) = log_3(27) - log_3(9) = 3 - 2 = 1"
+        "answer": "log<sub>a</sub>(x/y) = log<sub>a</sub>(x) - log<sub>a</sub>(y)\n\nExample: log<sub>3</sub>(27/9) = log<sub>3</sub>(27) - log<sub>3</sub>(9) = 3 - 2 = 1"
     },
     {
         "section": "Fundamental Rules",
         "question": "Power Rule?",
-        "answer": "log_a(x^n) = n * log_a(x)\n\nExample: log_2(8^3) = 3 * log_2(8) = 3 * 3 = 9"
+        "answer": "log<sub>a</sub>(x<sup>n</sup>) = n * log<sub>a</sub>(x)\n\nExample: log<sub>2</sub>(8<sup>3</sup>) = 3 * log<sub>2</sub>(8) = 3 * 3 = 9"
     },
     {
         "section": "Basic Properties",
         "question": "Zero Rule?",
-        "answer": "log_a(1) = 0, where a > 0 and a ≠ 1\n\nExample: log_5(1) = 0"
+        "answer": "log<sub>a</sub>(1) = 0, where a > 0 and a ≠ 1\n\nExample: log<sub>5</sub>(1) = 0"
     },
     {
         "section": "Basic Properties",
         "question": "Identity Rule?",
-        "answer": "log_a(a) = 1, for a > 0\n\nExample: log_7(7) = 1"
+        "answer": "log<sub>a</sub>(a) = 1, for a > 0\n\nExample: log<sub>7</sub>(7) = 1"
     },
     {
         "section": "Inverse Properties",
         "question": "Inverse Logarithm?",
-        "answer": "a^(log_a(x)) = x, for x > 0 and a > 0, a ≠ 1\n\nExample: 2^(log_2(8)) = 8"
+        "answer": "a<sup>(log<sub>a</sub>(x))</sup> = x, for x > 0 and a > 0, a ≠ 1\n\nExample: 2<sup>(log<sub>2</sub>(8))</sup> = 8"
     },
     {
         "section": "Inverse Properties",
         "question": "Inverse Exponent?",
-        "answer": "log_a(a^x) = x, for a > 0, a ≠ 1\n\nExample: log_3(3^4) = 4"
+        "answer": "log<sub>a</sub>(a<sup>x</sup>) = x, for a > 0, a ≠ 1\n\nExample: log<sub>3</sub>(3<sup>4</sup>) = 4"
     },
     {
         "section": "Advanced Rules",
         "question": "Change of Base?",
-        "answer": "log_a(x) = log_b(x) / log_b(a), where a, b > 0 and a, b ≠ 1\n\nExample: log_2(8) = log_10(8) / log_10(2) ≈ 3"
+        "answer": "log<sub>a</sub>(x) = log<sub>b</sub>(x) / log<sub>b</sub>(a), where a, b > 0 and a, b ≠ 1\n\nExample: log<sub>2</sub>(8) = log<sub>10</sub>(8) / log<sub>10</sub>(2) ≈ 3"
     },
     {
         "section": "Definitions",
         "question": "Logarithm definition?",
-        "answer": "If b^x = y, then log_b(y) = x\n\nExample: If 2^3 = 8, then log_2(8) = 3"
+        "answer": "If b<sup>x</sup> = y, then log<sub>b</sub>(y) = x\n\nExample: If 2<sup>3</sup> = 8, then log<sub>2</sub>(8) = 3"
     },
     {
         "section": "Special Logarithms",
         "question": "Natural logarithm?",
-        "answer": "ln(x) is the logarithm with base e (≈ 2.71828)\n\nExample: ln(e^2) = 2"
+        "answer": "ln(x) is the logarithm with base e (≈ 2.71828)\n\nExample: ln(e<sup>2</sup>) = 2"
     },
     {
         "section": "Special Logarithms",
@@ -65,47 +65,47 @@ var flashcards = {
     {
         "section": "Properties",
         "question": "Logarithm domain?",
-        "answer": "Domain of log_b(x) is x > 0, where b > 0 and b ≠ 1\n\nExample: log_2(-4) is undefined"
+        "answer": "Domain of log<sub>b</sub>(x) is x > 0, where b > 0 and b ≠ 1\n\nExample: log<sub>2</sub>(-4) is undefined"
     },
     {
         "section": "Applications",
-        "question": "Solve log_2(x) = 3?",
-        "answer": "x = 2^3 = 8\n\nExample: If log_2(x) = 3, then x = 2^3 = 8"
+        "question": "Solve log<sub>2</sub>(x) = 3?",
+        "answer": "x = 2<sup>3</sup> = 8\n\nExample: If log<sub>2</sub>(x) = 3, then x = 2<sup>3</sup> = 8"
     },
     {
         "section": "Relationships",
         "question": "Logs and exponents?",
-        "answer": "Logarithms and exponents are inverse operations\n\nExample: If 2^3 = 8, then log_2(8) = 3"
+        "answer": "Logarithms and exponents are inverse operations\n\nExample: If 2<sup>3</sup> = 8, then log<sub>2</sub>(8) = 3"
     },
     {
         "section": "Advanced Manipulations",
-        "question": "Simplify log_a(x^m) * log_a(y^n)?",
-        "answer": "log_a(x^m) * log_a(y^n) = log_a(x^m * y^n)\n\nExample: log_2(4^3) * log_2(8^2) = log_2(4^3 * 8^2)"
+        "question": "Simplify log<sub>a</sub>(x<sup>m</sup>) * log<sub>a</sub>(y<sup>n</sup>)?",
+        "answer": "log<sub>a</sub>(x<sup>m</sup>) * log<sub>a</sub>(y<sup>n</sup>) = log<sub>a</sub>(x<sup>m</sup> * y<sup>n</sup>)\n\nExample: log<sub>2</sub>(4<sup>3</sup>) * log<sub>2</sub>(8<sup>2</sup>) = log<sub>2</sub>(4<sup>3</sup> * 8<sup>2</sup>)"
     },
     {
         "section": "Simplifications",
-        "question": "Simplify ln(e^x)?",
-        "answer": "ln(e^x) = x\n\nExample: ln(e^5) = 5"
+        "question": "Simplify ln(e<sup>x</sup>)?",
+        "answer": "ln(e<sup>x</sup>) = x\n\nExample: ln(e<sup>5</sup>) = 5"
     },
     {
         "section": "Negation",
-        "question": "Result of log_a(1/x)?",
-        "answer": "log_a(1/x) = -log_a(x)\n\nExample: log_2(1/8) = -log_2(8) = -3"
+        "question": "Result of log<sub>a</sub>(1/x)?",
+        "answer": "log<sub>a</sub>(1/x) = -log<sub>a</sub>(x)\n\nExample: log<sub>2</sub>(1/8) = -log<sub>2</sub>(8) = -3"
     },
     {
         "section": "Bases",
         "question": "Convert log bases?",
-        "answer": "log_a(x) = log_b(x) / log_b(a)\n\nExample: log_3(9) = log_2(9) / log_2(3) ≈ 2"
+        "answer": "log<sub>a</sub>(x) = log<sub>b</sub>(x) / log<sub>b</sub>(a)\n\nExample: log<sub>3</sub>(9) = log<sub>2</sub>(9) / log<sub>2</sub>(3) ≈ 2"
     },
     {
         "section": "Equations",
-        "question": "Solve 2^(x+1) = 8?",
-        "answer": "Take log_2 of both sides, simplify to x + 1 = 3, so x = 2\n\nExample: 2^(x+1) = 8 → log_2(2^(x+1)) = log_2(8) → x + 1 = 3 → x = 2"
+        "question": "Solve 2<sup>(x+1)</sup> = 8?",
+        "answer": "Take log<sub>2</sub> of both sides, simplify to x + 1 = 3, so x = 2\n\nExample: 2<sup>(x+1)</sup> = 8 → log<sub>2</sub>(2<sup>(x+1)</sup>) = log<sub>2</sub>(8) → x + 1 = 3 → x = 2"
     },
     {
         "section": "Inequalities",
         "question": "Log inequalities?",
-        "answer": "Inequality sign may flip if base is between 0 and 1\n\nExample: log_2(x) > 3 → x > 8, but log_(1/2)(x) > 3 → x < 1/8"
+        "answer": "Inequality sign may flip if base is between 0 and 1\n\nExample: log<sub>2</sub>(x) > 3 → x > 8, but log<sub>(1/2)</sub>(x) > 3 → x < 1/8"
     },
     {
         "section": "Differentiation",

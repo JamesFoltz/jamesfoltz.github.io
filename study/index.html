@@ -168,9 +168,9 @@
             if (selectedFlashcards.length === 0) return;
 
             var card = selectedFlashcards[currentCard];
-            document.getElementById("section").innerText = card.section;
-            document.getElementById("question").innerText = "Question: " + card.question;
-            document.getElementById("answer").innerText = "Answer: " + card.answer;
+            document.getElementById("section").innerHTML = card.section;
+            document.getElementById("question").innerHTML = "Question: " + card.question;
+            document.getElementById("answer").innerHTML = "Answer: " + card.answer;
             document.getElementById("answer").style.display = "none";
             document.getElementById("showAnswerBtn").style.display = "inline-block";
 
@@ -238,7 +238,6 @@
         }
 
         document.addEventListener("keydown", (e) => {
-            e.preventDefault();
             if (!keyDown){
                 keyDown = true;
                 if (e.key == " ") {

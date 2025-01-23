@@ -6,121 +6,121 @@ var flashcards = {
             "answer": "2"
         },
     ],
-    logarithm_rules:[
+    logarithm_rules: [
     {
-        "section": "Logarithm Rules",
+        "section": "Fundamental Logarithm Rules",
         "question": "What is the Product Rule of logarithms?",
-        "answer": "The logarithm of the product is the sum of the logarithms of the factors."
+        "answer": "The logarithm of a product is the sum of the logarithms of the factors: log_a(xy) = log_a(x) + log_a(y)\nExample: log_2(8 * 4) = log_2(8) + log_2(4) = 3 + 2 = 5"
     },
     {
-        "section": "Logarithm Rules",
+        "section": "Fundamental Logarithm Rules",
         "question": "What is the Quotient Rule of logarithms?",
-        "answer": "The logarithm of the ratio of two quantities is the logarithm of the numerator minus the logarithm of the denominator."
+        "answer": "The logarithm of a quotient is the difference of the logarithms: log_a(x/y) = log_a(x) - log_a(y)\nExample: log_3(27/9) = log_3(27) - log_3(9) = 3 - 2 = 1"
     },
     {
-        "section": "Logarithm Rules",
+        "section": "Fundamental Logarithm Rules",
         "question": "What is the Power Rule of logarithms?",
-        "answer": "The logarithm of an exponential number is the exponent times the logarithm of the base."
+        "answer": "The logarithm of a power is the exponent times the logarithm of the base: log_a(x^n) = n * log_a(x)\nExample: log_2(8^3) = 3 * log_2(8) = 3 * 3 = 9"
     },
     {
-        "section": "Logarithm Rules",
+        "section": "Basic Logarithm Properties",
         "question": "What is the Zero Rule of logarithms?",
-        "answer": "The logarithm of 1 to any base is always equal to zero, as long as the base is positive but not equal to 1."
+        "answer": "The logarithm of 1 to any base is always 0: log_a(1) = 0, where a > 0 and a ≠ 1\nExample: log_5(1) = 0"
     },
     {
-        "section": "Logarithm Rules",
+        "section": "Basic Logarithm Properties",
         "question": "What is the Identity Rule of logarithms?",
-        "answer": "The logarithm of the argument (inside the parenthesis) wherein the argument equals the base is equal to 1, for base > 0."
+        "answer": "The logarithm of a number to its own base is 1: log_a(a) = 1, for a > 0\nExample: log_7(7) = 1"
     },
     {
-        "section": "Logarithm Rules",
+        "section": "Inverse Properties",
         "question": "What is the Inverse Property of Logarithm?",
-        "answer": "The logarithm of an exponential number where its base is the same as the base of the log is equal to the exponent."
+        "answer": "a^(log_a(x)) = x, for x > 0 and a > 0, a ≠ 1\nExample: 2^(log_2(8)) = 8"
     },
     {
-        "section": "Logarithm Rules",
+        "section": "Inverse Properties",
         "question": "What is the Inverse Property of Exponent?",
-        "answer": "Raising the logarithm of a number to its base is equal to the number."
+        "answer": "log_a(a^x) = x, for a > 0, a ≠ 1\nExample: log_3(3^4) = 4"
     },
     {
-        "section": "Logarithm Rules",
-        "question": "How do you expand log(x^n) using the Power Rule?",
-        "answer": "log(x^n) = n * log(x)"
-    },
-    {
-        "section": "Logarithm Rules",
-        "question": "What is the result of log_b(b^x)?",
-        "answer": "x"
-    },
-    {
-        "section": "Logarithm Rules",
-        "question": "How do you simplify log_a(x) + log_a(y)?",
-        "answer": "log_a(xy)"
-    },
-    {
-        "section": "Logarithm Rules",
-        "question": "What is the result of b^(log_b(x))?",
-        "answer": "x"
-    },
-    {
-        "section": "Logarithm Rules",
-        "question": "How do you simplify log_a(x) - log_a(y)?",
-        "answer": "log_a(x/y)"
-    },
-    {
-        "section": "Logarithm Rules",
+        "section": "Advanced Logarithm Rules",
         "question": "What is the Change of Base Formula?",
-        "answer": "log_a(x) = log_b(x) / log_b(a)"
+        "answer": "log_a(x) = log_b(x) / log_b(a), where a, b > 0 and a, b ≠ 1\nExample: log_2(8) = log_10(8) / log_10(2) ≈ 0.9031 / 0.3010 = 3"
     },
     {
-        "section": "Logarithm Rules",
+        "section": "Logarithm Definitions",
         "question": "What is the definition of a logarithm?",
-        "answer": "If b^x = y, then log_b(y) = x, where b is the base, x is the exponent, and y is the argument."
+        "answer": "If b^x = y, then log_b(y) = x, where b is the base, x is the exponent, and y is the argument.\nExample: If 2^3 = 8, then log_2(8) = 3"
     },
     {
-        "section": "Logarithm Rules",
+        "section": "Special Logarithms",
         "question": "What is the natural logarithm?",
-        "answer": "The natural logarithm, denoted as ln(x), is the logarithm with base e (Euler's number, approximately 2.71828)."
+        "answer": "The natural logarithm, denoted as ln(x), is the logarithm with base e (Euler's number, approximately 2.71828).\nExample: ln(e^2) = 2"
     },
     {
-        "section": "Logarithm Rules",
-        "question": "How do you simplify log_a(a)?",
-        "answer": "1"
-    },
-    {
-        "section": "Logarithm Rules",
-        "question": "What is the domain of the logarithmic function?",
-        "answer": "The domain of log_b(x) is all positive real numbers (x > 0), where b > 0 and b ≠ 1."
-    },
-    {
-        "section": "Logarithm Rules",
-        "question": "How do you solve the equation log_2(x) = 3?",
-        "answer": "x = 2^3 = 8"
-    },
-    {
-        "section": "Logarithm Rules",
-        "question": "What is the relationship between logarithms and exponents?",
-        "answer": "Logarithms and exponents are inverse operations of each other."
-    },
-    {
-        "section": "Logarithm Rules",
-        "question": "How do you simplify log_a(x^m) * log_a(y^n)?",
-        "answer": "log_a(x^m * y^n)"
-    },
-    {
-        "section": "Logarithm Rules",
+        "section": "Special Logarithms",
         "question": "What is the common logarithm?",
-        "answer": "The common logarithm, often written as log(x) without a base, is the logarithm with base 10."
+        "answer": "The common logarithm, often written as log(x) without a base, is the logarithm with base 10.\nExample: log(100) = 2"
     },
     {
-        "section": "Logarithm Rules",
+        "section": "Logarithm Properties",
+        "question": "What is the domain of the logarithmic function?",
+        "answer": "The domain of log_b(x) is all positive real numbers (x > 0), where b > 0 and b ≠ 1.\nExample: log_2(-4) is undefined"
+    },
+    {
+        "section": "Logarithm Applications",
+        "question": "How do you solve the equation log_2(x) = 3?",
+        "answer": "Use the inverse property of logarithms: x = 2^3 = 8\nExample: If log_2(x) = 3, then x = 2^3 = 8"
+    },
+    {
+        "section": "Logarithm Relationships",
+        "question": "What is the relationship between logarithms and exponents?",
+        "answer": "Logarithms and exponents are inverse operations of each other.\nExample: If 2^3 = 8, then log_2(8) = 3"
+    },
+    {
+        "section": "Advanced Logarithm Manipulations",
+        "question": "How do you simplify log_a(x^m) * log_a(y^n)?",
+        "answer": "Using the power rule twice and then the product rule: m * log_a(x) + n * log_a(y) = log_a(x^m * y^n)\nExample: log_2(4^3) * log_2(8^2) = 3log_2(4) + 2log_2(8) = log_2(4^3 * 8^2)"
+    },
+    {
+        "section": "Logarithm Simplifications",
         "question": "How do you express ln(e^x) in simpler terms?",
-        "answer": "x"
+        "answer": "ln(e^x) simplifies to x, using the inverse property of logarithms.\nExample: ln(e^5) = 5"
     },
     {
-        "section": "Logarithm Rules",
+        "section": "Logarithm Negation",
         "question": "What is the result of log_a(1/x)?",
-        "answer": "-log_a(x)"
+        "answer": "log_a(1/x) = -log_a(x), using the quotient rule with log_a(1) = 0\nExample: log_2(1/8) = -log_2(8) = -3"
+    },
+    {
+        "section": "Logarithm Bases",
+        "question": "How do you convert between logarithms of different bases?",
+        "answer": "Use the change of base formula: log_a(x) = log_b(x) / log_b(a)\nExample: log_3(9) = log_2(9) / log_2(3) ≈ 3.17 / 1.58 = 2"
+    },
+    {
+        "section": "Logarithm Equations",
+        "question": "How do you solve the equation 2^(x+1) = 8?",
+        "answer": "Take log_2 of both sides: log_2(2^(x+1)) = log_2(8), simplify to x + 1 = 3, so x = 2\nExample: 2^(x+1) = 8 → log_2(2^(x+1)) = log_2(8) → x + 1 = 3 → x = 2"
+    },
+    {
+        "section": "Logarithm Inequalities",
+        "question": "How do logarithmic inequalities work?",
+        "answer": "When solving log inequalities, remember that the inequality sign may flip if you raise both sides as powers of the base when the base is between 0 and 1.\nExample: log_2(x) > 3 → x > 2^3 = 8, but log_(1/2)(x) > 3 → x < (1/2)^3 = 1/8"
+    },
+    {
+        "section": "Logarithm Differentiation",
+        "question": "What is the derivative of ln(x)?",
+        "answer": "The derivative of ln(x) is 1/x\nExample: d/dx [ln(x)] = 1/x"
+    },
+    {
+        "section": "Logarithm Integration",
+        "question": "What is the integral of 1/x?",
+        "answer": "The integral of 1/x is ln|x| + C, where C is the constant of integration\nExample: ∫ (1/x) dx = ln|x| + C"
+    },
+    {
+        "section": "Logarithm Applications",
+        "question": "How are logarithms used in measuring earthquake intensity?",
+        "answer": "The Richter scale for earthquake magnitude is logarithmic. Each whole number increase represents a tenfold increase in magnitude.\nExample: An earthquake of magnitude 6 is 10 times more intense than one of magnitude 5"
     }
 ],
     "space": [

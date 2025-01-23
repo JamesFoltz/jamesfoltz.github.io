@@ -102,26 +102,6 @@ var flashcards = {
         "question": "Solve 2<sup>(x+1)</sup> = 8?",
         "answer": "Take log<sub>2</sub> of both sides, simplify to x + 1 = 3, so x = 2<br><br>Example: 2<sup>(x+1)</sup> = 8 → log<sub>2</sub>(2<sup>(x+1)</sup>) = log<sub>2</sub>(8) → x + 1 = 3 → x = 2"
     },
-    {
-        "section": "Inequalities",
-        "question": "Log inequalities?",
-        "answer": "Inequality sign may flip if base is between 0 and 1<br><br>Example: log<sub>2</sub>(x) > 3 → x > 8, but log<sub>(1/2)</sub>(x) > 3 → x < 1/8"
-    },
-    {
-        "section": "Differentiation",
-        "question": "Derivative of ln(x)?",
-        "answer": "d/dx [ln(x)] = 1/x<br><br>Example: d/dx [ln(x)] = 1/x"
-    },
-    {
-        "section": "Integration",
-        "question": "Integral of 1/x?",
-        "answer": "∫ (1/x) dx = ln|x| + C<br><br>Example: ∫ (1/x) dx = ln|x| + C"
-    },
-    {
-        "section": "Applications",
-        "question": "Logs in earthquake measurement?",
-        "answer": "Richter scale is logarithmic; each whole number is 10x stronger<br><br>Example: Magnitude 6 is 10 times more intense than magnitude 5"
-    }
 ],
     "space": [
         {

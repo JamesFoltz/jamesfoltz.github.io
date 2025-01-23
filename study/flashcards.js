@@ -6,6 +6,123 @@ var flashcards = {
             "answer": "2"
         },
     ],
+    logarithm_rules:[
+    {
+        "section": "Logarithm Rules",
+        "question": "What is the Product Rule of logarithms?",
+        "answer": "The logarithm of the product is the sum of the logarithms of the factors."
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "What is the Quotient Rule of logarithms?",
+        "answer": "The logarithm of the ratio of two quantities is the logarithm of the numerator minus the logarithm of the denominator."
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "What is the Power Rule of logarithms?",
+        "answer": "The logarithm of an exponential number is the exponent times the logarithm of the base."
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "What is the Zero Rule of logarithms?",
+        "answer": "The logarithm of 1 to any base is always equal to zero, as long as the base is positive but not equal to 1."
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "What is the Identity Rule of logarithms?",
+        "answer": "The logarithm of the argument (inside the parenthesis) wherein the argument equals the base is equal to 1, for base > 0."
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "What is the Inverse Property of Logarithm?",
+        "answer": "The logarithm of an exponential number where its base is the same as the base of the log is equal to the exponent."
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "What is the Inverse Property of Exponent?",
+        "answer": "Raising the logarithm of a number to its base is equal to the number."
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "How do you expand log(x^n) using the Power Rule?",
+        "answer": "log(x^n) = n * log(x)"
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "What is the result of log_b(b^x)?",
+        "answer": "x"
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "How do you simplify log_a(x) + log_a(y)?",
+        "answer": "log_a(xy)"
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "What is the result of b^(log_b(x))?",
+        "answer": "x"
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "How do you simplify log_a(x) - log_a(y)?",
+        "answer": "log_a(x/y)"
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "What is the Change of Base Formula?",
+        "answer": "log_a(x) = log_b(x) / log_b(a)"
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "What is the definition of a logarithm?",
+        "answer": "If b^x = y, then log_b(y) = x, where b is the base, x is the exponent, and y is the argument."
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "What is the natural logarithm?",
+        "answer": "The natural logarithm, denoted as ln(x), is the logarithm with base e (Euler's number, approximately 2.71828)."
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "How do you simplify log_a(a)?",
+        "answer": "1"
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "What is the domain of the logarithmic function?",
+        "answer": "The domain of log_b(x) is all positive real numbers (x > 0), where b > 0 and b ≠ 1."
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "How do you solve the equation log_2(x) = 3?",
+        "answer": "x = 2^3 = 8"
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "What is the relationship between logarithms and exponents?",
+        "answer": "Logarithms and exponents are inverse operations of each other."
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "How do you simplify log_a(x^m) * log_a(y^n)?",
+        "answer": "log_a(x^m * y^n)"
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "What is the common logarithm?",
+        "answer": "The common logarithm, often written as log(x) without a base, is the logarithm with base 10."
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "How do you express ln(e^x) in simpler terms?",
+        "answer": "x"
+    },
+    {
+        "section": "Logarithm Rules",
+        "question": "What is the result of log_a(1/x)?",
+        "answer": "-log_a(x)"
+    }
+],
     "space": [
         {
             "section": "Observational Astronomy",

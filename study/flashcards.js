@@ -1495,6 +1495,211 @@ var flashcards = {
             "section": "Cable Modem Servicing",
             "question": "What kind of network is used by many cable companies to service their cable modems and contains both fiber-optic and coaxial cabling?",
             "answer": "HFC (Hybrid Fiber-Coaxial)"
+        },
+        {
+            "question": "Which network topology uses a central device to forward messages to the destination device?",
+            "answer": "Star",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology has multiple pathways to send data to a destination device?",
+            "answer": "Mesh",
+            "section": "Network Topology"
+        },
+        {
+            "question": "The internet is a collection of connected networks. Select the topology that is similar to how the internet is physically connected.",
+            "answer": "Mesh",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most popular for building modern LAN's?",
+            "answer": "Star",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology gives each host direct access to each other host?",
+            "answer": "Mesh",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most reliable?",
+            "answer": "Mesh",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the least expensive to install?",
+            "answer": "Bus",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most difficult to troubleshoot?",
+            "answer": "Mesh",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most scalable?",
+            "answer": "Star",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most susceptible to a single point of failure?",
+            "answer": "Star",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the easiest to install?",
+            "answer": "Bus",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most susceptible to electromagnetic interference?",
+            "answer": "Bus",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most commonly used in home networks?",
+            "answer": "Star",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most commonly used in large enterprise networks?",
+            "answer": "Mesh",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most commonly used in wireless networks?",
+            "answer": "Star",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most flexible?",
+            "answer": "Star",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the easiest to expand?",
+            "answer": "Star",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most secure?",
+            "answer": "Mesh",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most suitable for small networks?",
+            "answer": "Star",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most suitable for large networks?",
+            "answer": "Mesh",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most commonly used in school networks?",
+            "answer": "Star",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most commonly used in server farms?",
+            "answer": "Mesh",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most commonly used in point-of-sale systems?",
+            "answer": "Star",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most commonly used in industrial control systems?",
+            "answer": "Mesh",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most commonly used in military networks?",
+            "answer": "Mesh",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most commonly used in home theater systems?",
+            "answer": "Star",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most commonly used in building automation systems?",
+            "answer": "Mesh",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most commonly used in video surveillance systems?",
+            "answer": "Star",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most commonly used in scientific research networks?",
+            "answer": "Mesh",
+            "section": "Network Topology"
+        },
+        {
+            "question": "Which network topology is the most commonly used in cloud computing?",
+            "answer": "Mesh",
+            "section": "Network Topology"
+        },
+        {
+            "question": "What is a network topology?",
+            "answer": "A network topology is the physical or logical arrangement of devices in a network.",
+            "section": "Network Topology"
+        },
+        {
+            "question": "What are the advantages of a star topology?",
+            "answer": "Star topologies are easy to install, expand, and troubleshoot. They are also relatively inexpensive.",
+            "section": "Network Topology"
+        },
+        {
+            "question": "What are the disadvantages of a star topology?",
+            "answer": "Star topologies are susceptible to a single point of failure. If the central device fails, the entire network goes down.",
+            "section": "Network Topology"
+        },
+        {
+            "question": "What are the advantages of a mesh topology?",
+            "answer": "Mesh topologies are highly reliable and scalable. They are also difficult to wire and troubleshoot.",
+            "section": "Network Topology"
+        },
+        {
+            "question": "What are the disadvantages of a mesh topology?",
+            "answer": "Mesh topologies are expensive to install and maintain. They are also difficult to troubleshoot.",
+            "section": "Network Topology"
+        },
+        {
+            "question": "What are the advantages of a bus topology?",
+            "answer": "Bus topologies are inexpensive to install and easy to expand.",
+            "section": "Network Topology"
+        },
+        {
+            "question": "What are the disadvantages of a bus topology?",
+            "answer": "Bus topologies are susceptible to electromagnetic interference. They are also difficult to troubleshoot.",
+            "section": "Network Topology"
+        },
+        {
+            "question": "What are the advantages of a ring topology?",
+            "answer": "Ring topologies are easy to install and expand. They are also relatively inexpensive.",
+            "section": "Network Topology"
+        },
+        {
+            "question": "What are the disadvantages of a ring topology?",
+            "answer": "Ring topologies are susceptible to a single point of failure. If one device on the ring fails, the entire network goes down.",
+            "section": "Network Topology"
+        },
+        {
+            "question": "What are the advantages of a tree topology?",
+            "answer": "Tree topologies are easy to install and expand. They are also relatively inexpensive.",
+            "section": "Network Topology"
+        },
+        {
+            "question": "What are the disadvantages of a tree topology?",
+            "answer": "Tree topologies are susceptible to a single point of failure. If the root node fails, the entire network goes down.",
+            "section": "Network Topology"
         }
     ]
 

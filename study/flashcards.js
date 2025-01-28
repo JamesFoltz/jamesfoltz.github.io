@@ -1,110 +1,106 @@
 var flashcards = {
-    "example": [
+    "example": [{
+        "section": "Example Section",
+        "question": "What is 1+1?",
+        "answer": "2"
+    }, ],
+    logarithm_rules: [{
+            "section": "Fundamental Rules",
+            "question": "Product Rule?",
+            "answer": "log<sub>a</sub>(xy) = log<sub>a</sub>(x) + log<sub>a</sub>(y)<br><br>Example: log<sub>2</sub>(8 * 4) = log<sub>2</sub>(8) + log<sub>2</sub>(4) = 3 + 2 = 5"
+        },
         {
-            "section": "Example Section",
-            "question": "What is 1+1?",
-            "answer": "2"
+            "section": "Fundamental Rules",
+            "question": "Quotient Rule?",
+            "answer": "log<sub>a</sub>(x/y) = log<sub>a</sub>(x) - log<sub>a</sub>(y)<br><br>Example: log<sub>3</sub>(27/9) = log<sub>3</sub>(27) - log<sub>3</sub>(9) = 3 - 2 = 1"
+        },
+        {
+            "section": "Fundamental Rules",
+            "question": "Power Rule?",
+            "answer": "log<sub>a</sub>(x<sup>n</sup>) = n * log<sub>a</sub>(x)<br><br>Example: log<sub>2</sub>(8<sup>3</sup>) = 3 * log<sub>2</sub>(8) = 3 * 3 = 9"
+        },
+        {
+            "section": "Basic Properties",
+            "question": "Zero Rule?",
+            "answer": "log<sub>a</sub>(1) = 0, where a > 0 and a ≠ 1<br><br>Example: log<sub>5</sub>(1) = 0"
+        },
+        {
+            "section": "Basic Properties",
+            "question": "Identity Rule?",
+            "answer": "log<sub>a</sub>(a) = 1, for a > 0<br><br>Example: log<sub>7</sub>(7) = 1"
+        },
+        {
+            "section": "Inverse Properties",
+            "question": "Inverse Logarithm?",
+            "answer": "a<sup>(log<sub>a</sub>(x))</sup> = x, for x > 0 and a > 0, a ≠ 1<br><br>Example: 2<sup>(log<sub>2</sub>(8))</sup> = 8"
+        },
+        {
+            "section": "Inverse Properties",
+            "question": "Inverse Exponent?",
+            "answer": "log<sub>a</sub>(a<sup>x</sup>) = x, for a > 0, a ≠ 1<br><br>Example: log<sub>3</sub>(3<sup>4</sup>) = 4"
+        },
+        {
+            "section": "Advanced Rules",
+            "question": "Change of Base?",
+            "answer": "log<sub>a</sub>(x) = log<sub>b</sub>(x) / log<sub>b</sub>(a), where a, b > 0 and a, b ≠ 1<br><br>Example: log<sub>2</sub>(8) = log<sub>10</sub>(8) / log<sub>10</sub>(2) ≈ 3"
+        },
+        {
+            "section": "Definitions",
+            "question": "Logarithm definition?",
+            "answer": "If b<sup>x</sup> = y, then log<sub>b</sub>(y) = x<br><br>Example: If 2<sup>3</sup> = 8, then log<sub>2</sub>(8) = 3"
+        },
+        {
+            "section": "Special Logarithms",
+            "question": "Natural logarithm?",
+            "answer": "ln(x) is the logarithm with base e (≈ 2.71828)<br><br>Example: ln(e<sup>2</sup>) = 2"
+        },
+        {
+            "section": "Special Logarithms",
+            "question": "Common logarithm?",
+            "answer": "log(x) without a base is the logarithm with base 10<br><br>Example: log(100) = 2"
+        },
+        {
+            "section": "Properties",
+            "question": "Logarithm domain?",
+            "answer": "Domain of log<sub>b</sub>(x) is x > 0, where b > 0 and b ≠ 1<br><br>Example: log<sub>2</sub>(-4) is undefined"
+        },
+        {
+            "section": "Applications",
+            "question": "Solve log<sub>2</sub>(x) = 3?",
+            "answer": "x = 2<sup>3</sup> = 8<br><br>Example: If log<sub>2</sub>(x) = 3, then x = 2<sup>3</sup> = 8"
+        },
+        {
+            "section": "Relationships",
+            "question": "Logs and exponents?",
+            "answer": "Logarithms and exponents are inverse operations<br><br>Example: If 2<sup>3</sup> = 8, then log<sub>2</sub>(8) = 3"
+        },
+        {
+            "section": "Advanced Manipulations",
+            "question": "Simplify log<sub>a</sub>(x<sup>m</sup>) * log<sub>a</sub>(y<sup>n</sup>)?",
+            "answer": "log<sub>a</sub>(x<sup>m</sup>) * log<sub>a</sub>(y<sup>n</sup>) = log<sub>a</sub>(x<sup>m</sup> * y<sup>n</sup>)<br><br>Example: log<sub>2</sub>(4<sup>3</sup>) * log<sub>2</sub>(8<sup>2</sup>) = log<sub>2</sub>(4<sup>3</sup> * 8<sup>2</sup>)"
+        },
+        {
+            "section": "Simplifications",
+            "question": "Simplify ln(e<sup>x</sup>)?",
+            "answer": "ln(e<sup>x</sup>) = x<br><br>Example: ln(e<sup>5</sup>) = 5"
+        },
+        {
+            "section": "Negation",
+            "question": "Result of log<sub>a</sub>(1/x)?",
+            "answer": "log<sub>a</sub>(1/x) = -log<sub>a</sub>(x)<br><br>Example: log<sub>2</sub>(1/8) = -log<sub>2</sub>(8) = -3"
+        },
+        {
+            "section": "Bases",
+            "question": "Convert log bases?",
+            "answer": "log<sub>a</sub>(x) = log<sub>b</sub>(x) / log<sub>b</sub>(a)<br><br>Example: log<sub>3</sub>(9) = log<sub>2</sub>(9) / log<sub>2</sub>(3) ≈ 2"
+        },
+        {
+            "section": "Equations",
+            "question": "Solve 2<sup>(x+1)</sup> = 8?",
+            "answer": "Take log<sub>2</sub> of both sides, simplify to x + 1 = 3, so x = 2<br><br>Example: 2<sup>(x+1)</sup> = 8 → log<sub>2</sub>(2<sup>(x+1)</sup>) = log<sub>2</sub>(8) → x + 1 = 3 → x = 2"
         },
     ],
-    logarithm_rules: [
-    {
-        "section": "Fundamental Rules",
-        "question": "Product Rule?",
-        "answer": "log<sub>a</sub>(xy) = log<sub>a</sub>(x) + log<sub>a</sub>(y)<br><br>Example: log<sub>2</sub>(8 * 4) = log<sub>2</sub>(8) + log<sub>2</sub>(4) = 3 + 2 = 5"
-    },
-    {
-        "section": "Fundamental Rules",
-        "question": "Quotient Rule?",
-        "answer": "log<sub>a</sub>(x/y) = log<sub>a</sub>(x) - log<sub>a</sub>(y)<br><br>Example: log<sub>3</sub>(27/9) = log<sub>3</sub>(27) - log<sub>3</sub>(9) = 3 - 2 = 1"
-    },
-    {
-        "section": "Fundamental Rules",
-        "question": "Power Rule?",
-        "answer": "log<sub>a</sub>(x<sup>n</sup>) = n * log<sub>a</sub>(x)<br><br>Example: log<sub>2</sub>(8<sup>3</sup>) = 3 * log<sub>2</sub>(8) = 3 * 3 = 9"
-    },
-    {
-        "section": "Basic Properties",
-        "question": "Zero Rule?",
-        "answer": "log<sub>a</sub>(1) = 0, where a > 0 and a ≠ 1<br><br>Example: log<sub>5</sub>(1) = 0"
-    },
-    {
-        "section": "Basic Properties",
-        "question": "Identity Rule?",
-        "answer": "log<sub>a</sub>(a) = 1, for a > 0<br><br>Example: log<sub>7</sub>(7) = 1"
-    },
-    {
-        "section": "Inverse Properties",
-        "question": "Inverse Logarithm?",
-        "answer": "a<sup>(log<sub>a</sub>(x))</sup> = x, for x > 0 and a > 0, a ≠ 1<br><br>Example: 2<sup>(log<sub>2</sub>(8))</sup> = 8"
-    },
-    {
-        "section": "Inverse Properties",
-        "question": "Inverse Exponent?",
-        "answer": "log<sub>a</sub>(a<sup>x</sup>) = x, for a > 0, a ≠ 1<br><br>Example: log<sub>3</sub>(3<sup>4</sup>) = 4"
-    },
-    {
-        "section": "Advanced Rules",
-        "question": "Change of Base?",
-        "answer": "log<sub>a</sub>(x) = log<sub>b</sub>(x) / log<sub>b</sub>(a), where a, b > 0 and a, b ≠ 1<br><br>Example: log<sub>2</sub>(8) = log<sub>10</sub>(8) / log<sub>10</sub>(2) ≈ 3"
-    },
-    {
-        "section": "Definitions",
-        "question": "Logarithm definition?",
-        "answer": "If b<sup>x</sup> = y, then log<sub>b</sub>(y) = x<br><br>Example: If 2<sup>3</sup> = 8, then log<sub>2</sub>(8) = 3"
-    },
-    {
-        "section": "Special Logarithms",
-        "question": "Natural logarithm?",
-        "answer": "ln(x) is the logarithm with base e (≈ 2.71828)<br><br>Example: ln(e<sup>2</sup>) = 2"
-    },
-    {
-        "section": "Special Logarithms",
-        "question": "Common logarithm?",
-        "answer": "log(x) without a base is the logarithm with base 10<br><br>Example: log(100) = 2"
-    },
-    {
-        "section": "Properties",
-        "question": "Logarithm domain?",
-        "answer": "Domain of log<sub>b</sub>(x) is x > 0, where b > 0 and b ≠ 1<br><br>Example: log<sub>2</sub>(-4) is undefined"
-    },
-    {
-        "section": "Applications",
-        "question": "Solve log<sub>2</sub>(x) = 3?",
-        "answer": "x = 2<sup>3</sup> = 8<br><br>Example: If log<sub>2</sub>(x) = 3, then x = 2<sup>3</sup> = 8"
-    },
-    {
-        "section": "Relationships",
-        "question": "Logs and exponents?",
-        "answer": "Logarithms and exponents are inverse operations<br><br>Example: If 2<sup>3</sup> = 8, then log<sub>2</sub>(8) = 3"
-    },
-    {
-        "section": "Advanced Manipulations",
-        "question": "Simplify log<sub>a</sub>(x<sup>m</sup>) * log<sub>a</sub>(y<sup>n</sup>)?",
-        "answer": "log<sub>a</sub>(x<sup>m</sup>) * log<sub>a</sub>(y<sup>n</sup>) = log<sub>a</sub>(x<sup>m</sup> * y<sup>n</sup>)<br><br>Example: log<sub>2</sub>(4<sup>3</sup>) * log<sub>2</sub>(8<sup>2</sup>) = log<sub>2</sub>(4<sup>3</sup> * 8<sup>2</sup>)"
-    },
-    {
-        "section": "Simplifications",
-        "question": "Simplify ln(e<sup>x</sup>)?",
-        "answer": "ln(e<sup>x</sup>) = x<br><br>Example: ln(e<sup>5</sup>) = 5"
-    },
-    {
-        "section": "Negation",
-        "question": "Result of log<sub>a</sub>(1/x)?",
-        "answer": "log<sub>a</sub>(1/x) = -log<sub>a</sub>(x)<br><br>Example: log<sub>2</sub>(1/8) = -log<sub>2</sub>(8) = -3"
-    },
-    {
-        "section": "Bases",
-        "question": "Convert log bases?",
-        "answer": "log<sub>a</sub>(x) = log<sub>b</sub>(x) / log<sub>b</sub>(a)<br><br>Example: log<sub>3</sub>(9) = log<sub>2</sub>(9) / log<sub>2</sub>(3) ≈ 2"
-    },
-    {
-        "section": "Equations",
-        "question": "Solve 2<sup>(x+1)</sup> = 8?",
-        "answer": "Take log<sub>2</sub> of both sides, simplify to x + 1 = 3, so x = 2<br><br>Example: 2<sup>(x+1)</sup> = 8 → log<sub>2</sub>(2<sup>(x+1)</sup>) = log<sub>2</sub>(8) → x + 1 = 3 → x = 2"
-    },
-],
-    "space": [
-        {
+    "space": [{
             "section": "Observational Astronomy",
             "question": "What does redshift in light from most galaxies indicate?",
             "answer": "It indicates that most galaxies are moving away from us."
@@ -210,8 +206,7 @@ var flashcards = {
             "answer": "Earth has a higher escape velocity because it has greater mass and stronger gravity than the Moon."
         }
     ],
-    "plate-tectonics": [
-        {
+    "plate-tectonics": [{
             "section": "Plate Tectonics",
             "question": "What occurs when two continental crust plates converge?",
             "answer": "The plates collide and form large mountain ranges."
@@ -312,8 +307,7 @@ var flashcards = {
             "answer": "Earthquakes often occur along transform boundaries."
         }
     ],
-    "math": [
-        {
+    "math": [{
             "section": "Algebra Basics",
             "question": "What is the coefficient of a variable without a visible coefficient?",
             "answer": "The coefficient is 1."
@@ -470,55 +464,46 @@ var flashcards = {
         },
         {
             "section": "Algebra Basics",
-
             "question": "What does 2x mean in algebraic notation?",
             "answer": "It means 2 multiplied by x, where 2 is the coefficient of x."
         },
         {
             "section": "Properties of Operations",
-
             "question": "What does the distributive property state?",
             "answer": "It states that a(b + c) = ab + ac, where multiplication is distributed over addition."
         },
         {
             "section": "Order of Operations",
-
             "question": "What does the acronym PEMDAS stand for in mathematics?",
             "answer": "It stands for Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)."
         },
         {
             "section": "Exponents",
-
             "question": "What does a negative exponent indicate?",
             "answer": "It indicates the reciprocal of the base raised to the positive of that exponent, e.g., x^(-n) = 1/(x^n)."
         },
         {
             "section": "Complex Numbers",
-
             "question": "How are complex numbers represented graphically?",
             "answer": "They are represented on a complex plane, where the real part is on the x-axis and the imaginary part on the y-axis."
         },
         {
             "section": "Geometry",
-
             "question": "What is true about the slopes of parallel lines?",
             "answer": "Parallel lines have the same slope."
         },
         {
             "section": "Algebra",
-
             "question": "What is the goal of factoring in algebra?",
             "answer": "The goal is to express a polynomial as a product of its factors."
         },
         {
             "section": "Geometry",
-
             "question": "What defines similar triangles?",
             "answer": "Similar triangles have the same shape but not necessarily the same size, with corresponding angles equal and sides proportional."
         }
     ],
-    "chemistry": [
-        {
+    "chemistry": [{
             "section": "Elements",
             "question": "What is the symbol for Hydrogen?",
             "answer": "H"
@@ -779,8 +764,7 @@ var flashcards = {
             "answer": "Mercury"
         }
     ],
-    "comptia-mc": [
-        {
+    "comptia-mc": [{
             "section": "Basic Network Components",
             "question": "Which of the following is a component that provides resources over a network?<br>1.) Client<br>2.) LAN<br>3.) Router<br>4.) Server",
             "answer": "The correct answer is 4"
@@ -1250,8 +1234,8 @@ var flashcards = {
             "question": "What are some of the common sources of wireless network radio frequency interference (RFI)? (Choose all that apply)<br>1.) Game consoles<br>2.) 900 MHz cordless phones<br>3.) Microwave ovens<br>4.) Baby monitors",
             "answer": "The correct answer is 1, 3, and 4"
         }
-    ], "comptia": [
-        {
+    ],
+    "comptia": [{
             "section": "Basic Network Components",
             "question": "Which component provides resources over a network?",
             "answer": "Server"
@@ -1700,7 +1684,62 @@ var flashcards = {
             "question": "What are the disadvantages of a tree topology?",
             "answer": "Tree topologies are susceptible to a single point of failure. If the root node fails, the entire network goes down.",
             "section": "Network Topology"
+        },
+        {
+            "section": "CompTia",
+            "question": "Which networking term refers to nodes that send and receive data traffic?",
+            "answer": "End systems"
+        },
+        {
+            "section": "CompTia",
+            "question": "What network model allows each computer to act as both client and server?",
+            "answer": "Peer-to-Peer network"
+        },
+        {
+            "section": "CompTia",
+            "question": "Which network type is most effective for a company with 50 employees, multiple printers, and a centralized server?",
+            "answer": "Small and Medium-sized Enterprise (SME) network"
+        },
+        {
+            "section": "CompTia",
+            "question": "What network connects multiple offices across different countries?",
+            "answer": "Wide Area Network (WAN)"
+        },
+        {
+            "section": "CompTia",
+            "question": "How do half-duplex and full-duplex differ in point-to-point communication?",
+            "answer": "Half-duplex allows data transmission in both directions but not simultaneously; full-duplex permits simultaneous two-way transmission"
+        },
+        {
+            "section": "CompTia",
+            "question": "What topology allows devices to communicate as if directly connected?",
+            "answer": "Logical topology"
+        },
+        {
+            "section": "CompTia",
+            "question": "In a star topology, what happens if a drop cable is removed?",
+            "answer": "Only the disconnected device is affected; others remain connected"
+        },
+        {
+            "section": "CompTia",
+            "question": "Which topology connects devices to a central forwarding appliance?",
+            "answer": "Star"
+        },
+        {
+            "section": "CompTia",
+            "question": "In a full mesh topology, what happens if one link breaks?",
+            "answer": "All other devices can still communicate"
+        },
+        {
+            "section": "CompTia",
+            "question": "What topology is used in an ad hoc wireless network without an access point?",
+            "answer": "Mesh"
+        },
+        {
+            "section": "CompTia",
+            "question": "Which topology saves power and scales for IoT devices using Zigbee?",
+            "answer": "Mesh"
         }
     ]
-
+]
 };

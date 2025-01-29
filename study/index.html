@@ -199,6 +199,7 @@
         function updateProgressBar() {
             var progressElement = document.getElementById("progress");
             var progressValue = ((currentCard + 1) / selectedFlashcards.length) * 100;
+            console.log(`${currentCard+1}/${selectedFlashcards.length}`)
             progressElement.value = progressValue;
         }
 

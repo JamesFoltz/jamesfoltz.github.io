@@ -169,8 +169,8 @@
 
             var card = selectedFlashcards[currentCard];
             document.getElementById("section").innerHTML = card.section;
-            document.getElementById("question").innerHTML = "Question: " + card.question;
-            document.getElementById("answer").innerHTML = "Answer: " + card.answer;
+            document.getElementById("question").innerHTML = card.question;
+            document.getElementById("answer").innerHTML = card.answer;
             document.getElementById("answer").style.display = "none";
             document.getElementById("showAnswerBtn").style.display = "inline-block";
 

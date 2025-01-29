@@ -1739,6 +1739,134 @@ var flashcards = {
             "section": "CompTia",
             "question": "Which topology saves power and scales for IoT devices using Zigbee?",
             "answer": "Mesh"
+        }, {
+            'section': 'Comptia',
+            'question': 'A limit on the maximum amount of data that can be transmitted over a network without fragmentation is referred to as: ',
+            'answer': ' MTU'
+        }, {
+            'section': 'Comptia',
+            'question': 'Authentication and authorization take place at the: ',
+            'answer': ' Session layer of the OSI model'
+        }, {
+            'section': 'Comptia',
+            'question': 'Data format translation, data compression, and data encryption/decryption take place at the: ',
+            'answer': ' Presentation layer of the OSI model'
+        }, {
+            'section': 'Comptia',
+            'question': 'In the context of the OSI model, the term "Data encapsulation" is used to describe a process where each layer of the OSI model adds its own control information to the original data that is being passed across the layers from the physical layer up to the application layer. ',
+            'answer': ' False'
+        }, {
+            'section': 'Comptia',
+            'question': 'In the OSI model, the layer 2 PDU is called: ',
+            'answer': ' Frame'
+        }, {
+            'section': 'Comptia',
+            'question': 'In the OSI model, the layer 3 PDU is known as: ',
+            'answer': ' Packet'
+        }, {
+            'section': 'Comptia',
+            'question': 'In the OSI model, the layer 4 TCP PDU is known as: ',
+            'answer': ' Segment'
+        }, {
+            'section': 'Comptia',
+            'question': 'In the OSI model, the layer 4 UDP PDU is called: ',
+            'answer': ' Datagram'
+        }, {
+            'section': 'Comptia',
+            'question': 'In the OSI model, the payload data (a.k.a. user data) is the actual data that is being nested between header and tail control information. ',
+            'answer': ' True'
+        }, {
+            'section': 'Comptia',
+            'question': 'In the OSI model, the physical layer PDU is known as: ',
+            'answer': ' Bit'
+        }, {
+            'section': 'Comptia',
+            'question': 'Layer 2 of the OSI model is also referred to as: ',
+            'answer': ' Data Link Layer'
+        }, {
+            'section': 'Comptia',
+            'question': 'Layer 4 of the OSI model is also known as: ',
+            'answer': ' Transport layer'
+        }, {
+            'section': 'Comptia',
+            'question': 'Layer 5 of the OSI model is also referred to as: ',
+            'answer': ' Session layer'
+        }, {
+            'section': 'Comptia',
+            'question': 'Physical layer of the OSI model is also known as: ',
+            'answer': ' Layer 1'
+        }, {
+            'section': 'Comptia',
+            'question': 'The application layer of the OSI model is also known as: ',
+            'answer': ' Layer 7'
+        }, {
+            'section': 'Comptia',
+            'question': 'The term "Presentation layer" refers to: ',
+            'answer': ' Layer 6 of the OSI model'
+        }, {
+            'section': 'Comptia',
+            'question': 'Transmission Control Protocol (TCP) is an example of a connectionless protocol. Because TCP does not support three-way handshake while establishing a network connection, it is referred to as unreliable or best-effort protocol. Example applications of TCP include transmission of video and audio streaming data. ',
+            'answer': ' False'
+        }, {
+            'section': 'Comptia',
+            'question': 'User Datagram Protocol (UDP) is a connection-oriented protocol using a three-way handshake which is a set of initial steps required for establishing network connection. UDP supports retransmission of lost packets, flow control (managing the amount of data that is being sent), and sequencing (rearranging packets that arrived out of order). Example applications of UDP include transmission of text and image data. ',
+            'answer': ' False'
+        }, {
+            'section': 'Comptia',
+            'question': 'What are the characteristic components of the OSI data link layer? (Select 3 answers) ',
+            'answer': ' Network switch<br>MAC address<br>Ethernet frame'
+        }, {
+            'section': 'Comptia',
+            'question': 'What is the name of a network layer protocol that specifies the format of packets and addressing scheme in network communications? ',
+            'answer': ' IP'
+        }, {
+            'section': 'Comptia',
+            'question': 'Which of the answers listed below refers to a data link layer device designed to forward frames between network segments? ',
+            'answer': ' Switch'
+        }, {
+            'section': 'Comptia',
+            'question': 'Which of the following answers does not refer to the OSI TCP segment header? ',
+            'answer': ' Layer 3 header'
+        }, {
+            'section': 'Comptia',
+            'question': 'Which of the following answers does not refer to the OSI UDP datagram header? ',
+            'answer': ' Layer 3 header'
+        }, {
+            'section': 'Comptia',
+            'question': 'Which of the following answers refer to examples of network layer header data? (Select 2 answers) ',
+            'answer': ' Destination IP address<br>Source IP address'
+        }, {
+            'section': 'Comptia',
+            'question': 'Which of the following answers refer to the OSI layer 2 header data? (Select 2 answers) ',
+            'answer': ' Source MAC address<br>Destination MAC address'
+        }, {
+            'section': 'Comptia',
+            'question': 'Which of the following answers refer to the OSI network layer components? (Select 3 answers) ',
+            'answer': ' Packet<br>IP address<br>Router'
+        }, {
+            'section': 'Comptia',
+            'question': 'Which of the following protocols reside(s) at the application layer of the OSI model? (Select all that apply) ',
+            'answer': ' HTTP<br>FTP<br>SMTP'
+        }, {
+            'section': 'Comptia',
+            'question': 'Which of the following reside at the physical layer of the OSI model? (Select 3 answers) ',
+            'answer': ' Network cabling<br>Repeater<br>Hub'
+        }, {
+            'section': 'Comptia',
+            'question': 'Which of the following TCP flags are used for establishing a network connection via TCP three-way handshake? (Select 2 answers) ',
+            'answer': ' SYN<br>ACK'
+        }, {
+            'section': 'Comptia',
+            'question': 'Which of the following terms refers to the OSI network layer? ',
+            'answer': ' Layer 3'
+        }, {
+            'section': 'Comptia',
+            'question': 'Which of the protocols listed below reside at the OSI transport layer? (Select 2 answers) ',
+            'answer': ' UDP/TCP'
+        }, {
+            'section': 'Comptia',
+            'question': 'Which OSI layer assumes the responsibility for opening, closing, and maintaining connections between applications? ',
+            'answer': ' Session layer'
         }
     ]
 ]

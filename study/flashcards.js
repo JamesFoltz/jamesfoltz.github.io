@@ -1,9 +1,11 @@
 var flashcards = {
-    example: [{
-        section: "Example Section",
-        question: "What is 1+1?",
-        answer: "2",
-    }, ],
+    example: [
+        {
+            section: "Example Section",
+            question: "What is 1+1?",
+            answer: "2",
+        },
+    ],
     logarithm_rules: [{
             section: "Fundamental Rules",
             question: "Product Rule?",

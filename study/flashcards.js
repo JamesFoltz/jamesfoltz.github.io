@@ -1839,35 +1839,37 @@ var flashcards = {
             "answer": "The OSI model"
         }
     ],
-    "1_3_2_Physical_Layer_Functions": [{
-            section: "Physical Layer Functions",
-            question: "What are the main physical interfaces provided by a SOHO router at layer 1?",
-            answer: "1. RJ45 ports for local cabled network (LAN ports)<br>2. Radio antennae for wireless signals<br>3. A modem to connect to the ISP's network (WAN port)",
-        },
-        {
-            section: "Physical Layer Functions",
-            question: "How many RJ45 ports are typically available for the local cabled network on a SOHO router?",
-            answer: "Usually four",
-        },
-        {
-            section: "Physical Layer Functions",
-            question: "What is the purpose of the radio antennae on a SOHO router?",
-            answer: "To transmit and receive wireless signals",
-        },
-        {
-            section: "Physical Layer Functions",
-            question: "What is the typical label for the port that connects to the ISP's network on a SOHO router?",
-            answer: "WAN port",
-        },
-        {
-            section: "Physical Layer Functions",
-            question: "In the example given, what type of WAN interface is used for fiber to the premise's Internet service?",
-            answer: "An RJ45 port using Ethernet technology",
-        },
-        {
-            section: "Physical Layer Functions",
-            question: "Name two alternative types of WAN modem connections that might be found on other SOHO routers.",
-            answer: "1. RJ11 port for digital subscriber line (DSL) service<br>2. F-connector coax jack for cable service",
-        }
-    ],
+"1_3_2_Physical_Layer_Functions": [
+    {
+        section: "Physical Layer Functions",
+        question: "What are the three main physical interfaces provided by a SOHO router at the physical layer?",
+        answer: "1. RJ45 ports for local cabled network (LAN ports)<br>2. Radio antennae for wireless signals<br>3. A modem to connect to the ISP's network (WAN port)",
+    },
+    {
+        section: "Physical Layer Functions",
+        question: "How many RJ45 ports are typically available for the local cabled network (LAN) on a SOHO router?",
+        answer: "Usually four",
+    },
+    {
+        section: "Physical Layer Functions",
+        question: "What is the purpose of the radio antennae on a SOHO router?",
+        answer: "To transmit and receive wireless signals for Wi-Fi connectivity",
+    },
+    {
+        section: "Physical Layer Functions",
+        question: "What is the common label for the port that connects a SOHO router to the Internet Service Provider's network?",
+        answer: "WAN port",
+    },
+    {
+        section: "Physical Layer Functions",
+        question: "What type of connector might be used for the WAN port on a SOHO router designed for fiber-to-the-premises Internet service?",
+        answer: "An RJ45 port using Ethernet technology",
+    },
+    {
+        section: "Physical Layer Functions",
+        question: "Name two alternative types of WAN modem connections that might be found on SOHO routers for different types of Internet services.",
+        answer: "1. RJ11 port for digital subscriber line (DSL) service<br>2. F-connector coax jack for cable service",
+    }
+],
+
 };

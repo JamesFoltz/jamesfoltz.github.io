@@ -4,8 +4,8 @@
   "description": "Flashcards",
   "start_url": "/study",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#ffffff",
+  "background_color": "#111827",
+  "theme_color": "#111827",
   "icons": [
     {
       "src": "/icon-192x192.png",

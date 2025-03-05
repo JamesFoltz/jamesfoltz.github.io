@@ -1808,7 +1808,7 @@ var flashcards = {
             answer: " Session layer",
         },
     ],
-    "1-3-1_SOHO_Routers": [{
+    "1.3.1 SOHO Routers": [{
             "section": "SOHO Routers",
             "question": "What does SOHO stand for in networking?",
             "answer": "Small Office/Home Office"
@@ -1871,5 +1871,146 @@ var flashcards = {
         answer: "1. RJ11 port for digital subscriber line (DSL) service<br>2. F-connector coax jack for cable service",
     }
 ],
-
+"Port Numbers":[
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 80?",
+        answer: "Hypertext Transfer Protocol (HTTP)",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 443?",
+        answer: "HTTP Secure (HTTPS)",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 22?",
+        answer: "Secure Shell (SSH)",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 53?",
+        answer: "Domain Name System (DNS)",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 20?",
+        answer: "File Transfer Protocol (FTP) Data Transfer",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 21?",
+        answer: "File Transfer Protocol (FTP) Command Control",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 25?",
+        answer: "Simple Mail Transfer Protocol (SMTP)",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 110?",
+        answer: "Post Office Protocol (POP3)",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 143?",
+        answer: "Internet Message Access Protocol (IMAP)",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 161?",
+        answer: "Simple Network Management Protocol (SNMP)",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 389?",
+        answer: "Lightweight Directory Access Protocol (LDAP)",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 5060?",
+        answer: "Session Initiation Protocol (SIP)",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 5432?",
+        answer: "PostgreSQL",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 6881-6999?",
+        answer: "BitTorrent",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 5353?",
+        answer: "Multicast DNS (mDNS)",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 1194?",
+        answer: "OpenVPN",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 3306?",
+        answer: "MySQL",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 1521?",
+        answer: "Oracle Database",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 1723?",
+        answer: "Point-to-Point Tunneling Protocol (PPTP)",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 3389?",
+        answer: "Remote Desktop Protocol (RDP)",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 8080?",
+        answer: "Alternate HTTP Port",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 123?",
+        answer: "Network Time Protocol (NTP)",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 69?",
+        answer: "Trivial File Transfer Protocol (TFTP)",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 514?",
+        answer: "Syslog",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 636?",
+        answer: "Lightweight Directory Access Protocol over SSL/TLS (LDAPS)",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 995?",
+        answer: "Post Office Protocol over SSL/TLS (POP3S)",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 465?",
+        answer: "Simple Mail Transfer Protocol over SSL/TLS (SMTPS)",
+    },
+    {
+        section: "Common Network Ports",
+        question: "What protocol uses port 993?",
+        answer: "Internet Message Access Protocol over SSL/TLS (IMAPS)",
+    },
+]
 };

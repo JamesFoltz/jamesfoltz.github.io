@@ -157,7 +157,7 @@
         var keyDown = false
         var currentCard = 0;
         var selectedFlashcards = [];
-        var defaultSet = Object.values(flashcards)[0];
+        var defaultSet = Object.keys(flashcards)[0];
 
         function getFlashcardCategoryFromURL() {
             const params = new URLSearchParams(window.location.search);

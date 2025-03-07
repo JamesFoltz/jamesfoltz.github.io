@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashcards</title>
     <link rel="manifest" href="./manifest.json" />
     <style>
-        :root{
+        :root {
             margin: 0;
             padding: 0;
             overflow: hidden;
         }
+
         body {
             background-color: #111827;
             color: #E5E7EB;
@@ -49,7 +51,8 @@
             text-align: center;
         }
 
-        #question, #answer {
+        #question,
+        #answer {
             font-size: 2vw;
             text-align: left;
             margin-bottom: 2rem;
@@ -92,12 +95,14 @@
         }
 
         /* Aspect Ratio for Mobile */
-        @media (aspect-ratio: 1/1), (max-aspect-ratio: 1/1) {
+        @media (aspect-ratio: 1/1),
+        (max-aspect-ratio: 1/1) {
             #section {
                 font-size: 5vw;
             }
 
-            #question, #answer {
+            #question,
+            #answer {
                 font-size: 4vw;
             }
 
@@ -128,30 +133,31 @@
         }
     </style>
 </head>
+
 <body>
 
-<!-- Add the dropdown menu -->
-<select id="deckSelector" onchange="changeDeck(this.value)"></select>
+    <!-- Add the dropdown menu -->
+    <select id="deckSelector" onchange="changeDeck(this.value)"></select>
 
-<div id="flashcard">
-    <progress id="progress" value="0" max="100"></progress>
+    <div id="flashcard">
+        <progress id="progress" value="0" max="100"></progress>
 
-    <h2 id="section">Section Title</h2>
-    <div id="question">This is a sample question. What is the answer?</div>
-    <div id="answer" style="display: none;">This is the answer to the question.</div>
+        <h2 id="section">Section Title</h2>
+        <div id="question">This is a sample question. What is the answer?</div>
+        <div id="answer" style="display: none;">This is the answer to the question.</div>
 
-    <div>
-        <button id="showAnswerBtn" onclick="showAnswer()" tabindex="-1">Show Answer</button>
-        <button onclick="prevCard()" tabindex="-2">Previous</button>
-        <button onclick="nextCard()" tabindex="-3">Next</button>
+        <div>
+            <button id="showAnswerBtn" onclick="showAnswer()" tabindex="-1">Show Answer</button>
+            <button onclick="prevCard()" tabindex="-2">Previous</button>
+            <button onclick="nextCard()" tabindex="-3">Next</button>
+        </div>
     </div>
-</div>
     <script src="flashcards.js"></script>
     <script>
         var keyDown = false
         var currentCard = 0;
         var selectedFlashcards = [];
-        var defaultSet = "chemistry"
+        var defaultSet = Object.values(flashcards)[0];
 
         function getFlashcardCategoryFromURL() {
             const params = new URLSearchParams(window.location.search);
@@ -163,7 +169,9 @@
                 const j = Math.floor(Math.random() * (i + 1));
                 [array[i], array[j]] = [array[j], array[i]];
             }
+            return array; // Return the shuffled array
         }
+
 
         function renderCard() {
             if (selectedFlashcards.length === 0) return;
@@ -200,7 +208,7 @@
         function updateProgressBar() {
             var progressElement = document.getElementById("progress");
             var progressValue = ((currentCard + 1) / selectedFlashcards.length) * 100;
-            console.log(`${currentCard+1}/${selectedFlashcards.length}`)
+            console.log(`${currentCard + 1}/${selectedFlashcards.length}`)
             progressElement.value = progressValue;
         }
 
@@ -227,9 +235,7 @@
 
             if (flashcardCategory && flashcards[flashcardCategory]) {
                 selectedFlashcards = [...flashcards[flashcardCategory]]; // Create a copy of the array
-                shuffleArray(selectedFlashcards);
-                shuffleArray(selectedFlashcards);
-                shuffleArray(selectedFlashcards);
+                selectedFlashcards = shuffleArray(shuffleArray(shuffleArray(shuffleArray(selectedFlashcards))));
                 currentCard = 0; // Reset to the first card when changing decks
             } else {
                 alert('Flashcard category not found!');
@@ -240,7 +246,7 @@
         }
 
         document.addEventListener("keydown", (e) => {
-            if (!keyDown){
+            if (!keyDown) {
                 keyDown = true;
                 if (e.key == " ") {
                     e.preventDefault();
@@ -263,15 +269,16 @@
             }
         });
 
-        document.addEventListener("keyup",(e) => {
+        document.addEventListener("keyup", (e) => {
             keyDown = false
         });
 
-        window.onload = function() {
+        window.onload = function () {
             populateDeckSelector();
             initializeFlashcards();
         };
     </script>
 
 </body>
+
 </html>

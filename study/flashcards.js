@@ -2276,144 +2276,259 @@ var flashcards = {
   ],
   "Port Numbers": [
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 80?",
-      answer: "Hypertext Transfer Protocol (HTTP)",
+      "section": "Ports",
+      "question": "What port is File Transfer Protocol (FTP)?",
+      "answer": "20/21"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 443?",
-      answer: "HTTP Secure (HTTPS)",
+      "section": "Ports",
+      "question": "What protocol uses port 20/21?",
+      "answer": "File Transfer Protocol (FTP)"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 22?",
-      answer: "Secure Shell (SSH)",
+      "section": "Ports",
+      "question": "What port is Secure Shell (SSH)?",
+      "answer": "22"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 53?",
-      answer: "Domain Name System (DNS)",
+      "section": "Ports",
+      "question": "What protocol uses port 22?",
+      "answer": "Secure Shell (SSH) and Secure File Transfer Protocol (SFTP)"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 20?",
-      answer: "File Transfer Protocol (FTP) Data Transfer",
+      "section": "Ports",
+      "question": "What port is Secure File Transfer Protocol (SFTP)?",
+      "answer": "22"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 21?",
-      answer: "File Transfer Protocol (FTP) Command Control",
+      "section": "Ports",
+      "question": "What port is Telnet?",
+      "answer": "23"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 25?",
-      answer: "Simple Mail Transfer Protocol (SMTP)",
+      "section": "Ports",
+      "question": "What protocol uses port 23?",
+      "answer": "Telnet"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 110?",
-      answer: "Post Office Protocol (POP3)",
+      "section": "Ports",
+      "question": "What port is Simple Mail Transfer Protocol (SMTP)?",
+      "answer": "25"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 143?",
-      answer: "Internet Message Access Protocol (IMAP)",
+      "section": "Ports",
+      "question": "What protocol uses port 25?",
+      "answer": "Simple Mail Transfer Protocol (SMTP)"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 161?",
-      answer: "Simple Network Management Protocol (SNMP)",
+      "section": "Ports",
+      "question": "What port is Domain Name System (DNS)?",
+      "answer": "53"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 389?",
-      answer: "Lightweight Directory Access Protocol (LDAP)",
+      "section": "Ports",
+      "question": "What protocol uses port 53?",
+      "answer": "Domain Name System (DNS)"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 5060?",
-      answer: "Session Initiation Protocol (SIP)",
+      "section": "Ports",
+      "question": "What port is Dynamic Host Configuration Protocol (DHCP)?",
+      "answer": "67/68"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 5432?",
-      answer: "PostgreSQL",
+      "section": "Ports",
+      "question": "What protocol uses port 67/68?",
+      "answer": "Dynamic Host Configuration Protocol (DHCP)"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 6881-6999?",
-      answer: "BitTorrent",
+      "section": "Ports",
+      "question": "What port is Trivial File Transfer Protocol (TFTP)?",
+      "answer": "69"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 5353?",
-      answer: "Multicast DNS (mDNS)",
+      "section": "Ports",
+      "question": "What protocol uses port 69?",
+      "answer": "Trivial File Transfer Protocol (TFTP)"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 1194?",
-      answer: "OpenVPN",
+      "section": "Ports",
+      "question": "What port is Hypertext Transfer Protocol (HTTP)?",
+      "answer": "80"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 3306?",
-      answer: "MySQL",
+      "section": "Ports",
+      "question": "What protocol uses port 80?",
+      "answer": "Hypertext Transfer Protocol (HTTP)"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 1521?",
-      answer: "Oracle Database",
+      "section": "Ports",
+      "question": "What port is Post Office Protocol v3 (POP3)?",
+      "answer": "110"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 1723?",
-      answer: "Point-to-Point Tunneling Protocol (PPTP)",
+      "section": "Ports",
+      "question": "What protocol uses port 110?",
+      "answer": "Post Office Protocol v3 (POP3)"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 3389?",
-      answer: "Remote Desktop Protocol (RDP)",
+      "section": "Ports",
+      "question": "What port is Network Time Protocol (NTP)?",
+      "answer": "123"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 8080?",
-      answer: "Alternate HTTP Port",
+      "section": "Ports",
+      "question": "What protocol uses port 123?",
+      "answer": "Network Time Protocol (NTP)"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 123?",
-      answer: "Network Time Protocol (NTP)",
+      "section": "Ports",
+      "question": "What port is Internet Message Access Protocol (IMAP)?",
+      "answer": "143"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 69?",
-      answer: "Trivial File Transfer Protocol (TFTP)",
+      "section": "Ports",
+      "question": "What protocol uses port 143?",
+      "answer": "Internet Message Access Protocol (IMAP)"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 514?",
-      answer: "Syslog",
+      "section": "Ports",
+      "question": "What port is Simple Network Management Protocol (SNMP)?",
+      "answer": "161/162"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 636?",
-      answer: "Lightweight Directory Access Protocol over SSL/TLS (LDAPS)",
+      "section": "Ports",
+      "question": "What protocol uses port 161/162?",
+      "answer": "Simple Network Management Protocol (SNMP)"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 995?",
-      answer: "Post Office Protocol over SSL/TLS (POP3S)",
+      "section": "Ports",
+      "question": "What port is Lightweight Directory Access Protocol (LDAP)?",
+      "answer": "389"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 465?",
-      answer: "Simple Mail Transfer Protocol over SSL/TLS (SMTPS)",
+      "section": "Ports",
+      "question": "What protocol uses port 389?",
+      "answer": "Lightweight Directory Access Protocol (LDAP)"
     },
     {
-      section: "Common Network Ports",
-      question: "What protocol uses port 993?",
-      answer: "Internet Message Access Protocol over SSL/TLS (IMAPS)",
+      "section": "Ports",
+      "question": "What port is Hypertext Transfer Protocol Secure (HTTPS)?",
+      "answer": "443"
     },
+    {
+      "section": "Ports",
+      "question": "What protocol uses port 443?",
+      "answer": "Hypertext Transfer Protocol Secure (HTTPS)"
+    },
+    {
+      "section": "Ports",
+      "question": "What port is Server Message Block (SMB)?",
+      "answer": "445"
+    },
+    {
+      "section": "Ports",
+      "question": "What protocol uses port 445?",
+      "answer": "Server Message Block (SMB)"
+    },
+   {
+      "section": "Ports",
+      "question": "What port is Syslog?",
+      "answer": "514"
+    },
+    {
+      "section": "Ports",
+      "question": "What protocol uses port 514?",
+      "answer": "Syslog"
+    },
+   {
+      "section": "Ports",
+      "question": "What port is SMTP TLS?",
+      "answer": "587"
+    },
+    {
+      "section": "Ports",
+      "question": "What protocol uses port 587?",
+      "answer": "SMTP TLS"
+    },
+    {
+      "section": "Ports",
+      "question": "What port is Lightweight Directory Access Protocol (LDAPS)?",
+      "answer": "636"
+    },
+    {
+      "section": "Ports",
+      "question": "What protocol uses port 636?",
+      "answer": "Lightweight Directory Access Protocol (over SSL) (LDAPS)"
+    },
+    {
+      "section": "Ports",
+      "question": "What port is IMAP over SSL?",
+      "answer": "993"
+    },
+    {
+      "section": "Ports",
+      "question": "What protocol uses port 993?",
+      "answer": "IMAP over SSL"
+    },
+    {
+      "section": "Ports",
+      "question": "What port is POP3 over SSL?",
+      "answer": "995"
+    },
+    {
+      "section": "Ports",
+      "question": "What protocol uses port 995?",
+      "answer": "POP3 over SSL"
+    },
+    {
+      "section": "Ports",
+      "question": "What port is Structured Query Language (SQL) Server?",
+      "answer": "1433"
+    },
+    {
+      "section": "Ports",
+      "question": "What protocol uses port 1433?",
+      "answer": "Structured Query Language (SQL) Server"
+    },
+    {
+      "section": "Ports",
+      "question": "What port is SOLnet?",
+      "answer": "1521"
+    },
+    {
+      "section": "Ports",
+      "question": "What protocol uses port 1521?",
+      "answer": "SOLnet"
+    },
+    {
+      "section": "Ports",
+      "question": "What port is MySQL?",
+      "answer": "3306"
+    },
+    {
+      "section": "Ports",
+      "question": "What protocol uses port 3306?",
+      "answer": "MySQL"
+    },
+    {
+      "section": "Ports",
+      "question": "What port is Remote Desktop Protocol (RDP)?",
+      "answer": "3389"
+    },
+    {
+      "section": "Ports",
+      "question": "What protocol uses port 3389?",
+      "answer": "Remote Desktop Protocol (RDP)"
+    },
+    {
+      "section": "Ports",
+      "question": "What port is Session Initiation Protocol (SIP)?",
+      "answer": "5060/5061"
+    },
+    {
+      "section": "Ports",
+      "question": "What protocol uses port 5060/5061?",
+      "answer": "Session Initiation Protocol (SIP)"
+    }
   ],
 };

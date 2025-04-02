@@ -2531,4 +2531,66 @@ var flashcards = {
       "answer": "Session Initiation Protocol (SIP)"
     }
   ],
+  "The Stranger Vocab": [
+    {
+      "section": "Vocab",
+      "question": "Destitute",
+      "answer": ""
+    },
+    {
+      "section": "Vocab",
+      "question": "Palor",
+      "answer": ""
+    },
+    {
+      "section": "Vocab",
+      "question": "Furtive",
+      "answer": ""
+    },
+    {
+      "section": "Vocab",
+      "question": "Taciturn",
+      "answer": ""
+    },
+    {
+      "section": "Vocab",
+      "question": "Indignant",
+      "answer": ""
+    },
+    {
+      "section": "Vocab",
+      "question": "Enumerate",
+      "answer": ""
+    },
+    {
+      "section": "Vocab",
+      "question": "Reproach",
+      "answer": ""
+    },
+    {
+      "section": "Vocab",
+      "question": "Implacable",
+      "answer": ""
+    },
+    {
+      "section": "Vocab",
+      "question": "Tacit",
+      "answer": ""
+    },
+    {
+      "section": "Vocab",
+      "question": "Respite",
+      "answer": ""
+    },
+    {
+      "section": "Vocab",
+      "question": "Odious",
+      "answer": ""
+    },
+    {
+      "section": "Vocab",
+      "question": "Dubious",
+      "answer": ""
+    }
+  ]
 };

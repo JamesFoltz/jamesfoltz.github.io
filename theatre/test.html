@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>User Info Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>Send My Info</h1>
+    <p>
+      This will send basic browser and IP information to a Discord webhook.
+    </p>
+    <button id="sendBtn">I Agree & Send</button>
+    <pre id="status"></pre>
+  </div>
+
+  <script>
+    const WEBHOOK_URL = "https://ptb.discord.com/api/webhooks/1465917225818132575/eaIqusPShhtUlsTUlwmoZurmLcyFfqWrDsWSXe78jubMr4MSvFrR7siYeFWlIQ_aaqHm";
+
+async function getUserInfo() {
+  const ipRes = await fetch("https://api.ipify.org?format=json");
+  const { ip } = await ipRes.json();
+
+  return {
+    ip,
+    userAgent: navigator.userAgent,
+    platform: navigator.platform,
+    language: navigator.language,
+    screen: `${screen.width}x${screen.height}`,
+    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+    timestamp: new Date().toISOString()
+  };
+}
+
+async function sendToDiscord(data) {
+  const content = Object.entries(data)
+    .map(([k, v]) => `**${k}**: ${v}`)
+    .join("\n");
+
+  const payload = {
+    content: content
+  };
+
+  await fetch(WEBHOOK_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload)
+  });
+}
+
+document.getElementById("sendBtn").addEventListener("click", async () => {
+  const status = document.getElementById("status");
+  status.textContent = "Collecting info...";
+
+  try {
+    const info = await getUserInfo();
+    await sendToDiscord(info);
+    status.textContent = "Sent successfully.";
+  } catch (err) {
+    status.textContent = "Error:\n" + err.message;
+  }
+});
+
+  </script>
+</body>
+</html>

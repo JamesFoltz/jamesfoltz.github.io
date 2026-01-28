@@ -11,7 +11,7 @@
     <p>
       This will send basic browser and IP information to a Discord webhook.
     </p>
-    <button id="sendBtn" onclick=sendinfo>I Agree & Send</button>
+    <button id="sendBtn" onclick="sendinfo()">I Agree & Send</button>
     <pre id="status"></pre>
   </div>
 
@@ -90,8 +90,15 @@ async function collectClientInfo() {
 }
 
 
-var sendinfo = async () => {try {const info = await collectClientInfo();await sendToDiscord(info);} catch (err) {}};
-sendinfo();
+async function sendinfo() {
+  try {
+    const info = await collectClientInfo();
+    await sendToDiscord(info);
+  } catch (err) {
+    console.error(err);
+  }
+}
+// sendinfo();
   </script>
 </body>
 </html>

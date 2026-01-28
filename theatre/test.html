@@ -59,7 +59,7 @@ async function collectClientInfo() {
     timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
     timestamp: new Date().toISOString(),
     // navigator: navigatorDump,
-    connectStart: navigator.performance.now()
+    connectStart: window.performance.now()
   };
 }
 

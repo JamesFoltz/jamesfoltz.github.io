@@ -50,33 +50,6 @@ async function collectClientInfo() {
   } catch {
     // silently ignore IP failure
   }
-
-  // const props = new Set();
-  // let obj = navigator;
-
-  // while (obj) {
-  //   Object.getOwnPropertyNames(obj).forEach(p => props.add(p));
-  //   obj = Object.getPrototypeOf(obj);
-  // }
-
-  // const navigatorDump = {};
-
-  // for (const key of [...props].sort()) {
-  //   try {
-  //     const value = navigator[key];
-  //     navigatorDump[key] =
-  //       typeof value === "object" && value !== null
-  //         ? `[object ${value.constructor?.name || "Object"}]`
-  //         : typeof value === "function"
-  //         ? "[function]"
-  //         : JSON.stringify(value);
-  //   } catch {
-  //     navigatorDump[key] = "[inaccessible]";
-  //   }
-  // }
-
-  const navEntry = performance.getEntriesByType("navigation")[0];
-
   return {
     ip,
     userAgent: navigator.userAgent,
@@ -86,7 +59,7 @@ async function collectClientInfo() {
     timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
     timestamp: new Date().toISOString(),
     // navigator: navigatorDump,
-    connectStart: navEntry?.connectStart ?? null
+    connectStart: navigator.performance.now()
   };
 }
 
@@ -99,7 +72,7 @@ async function sendinfo() {
     console.error(err);
   }
 }
-// sendinfo();
+sendinfo();
   </script>
 </body>
 </html>

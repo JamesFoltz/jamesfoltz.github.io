@@ -68,7 +68,7 @@ async function collectClientInfo() {
           ? `[object ${value.constructor?.name || "Object"}]`
           : typeof value === "function"
           ? "[function]"
-          : value;
+          : JSON.stringify(value);
     } catch {
       navigatorDump[key] = "[inaccessible]";
     }
